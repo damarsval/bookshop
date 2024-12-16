@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elysium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper-bundle.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-cnt">
+        <a href="#" class="logo">Спираль</a>
+      </div>
+      <div class="header-middle">
+        <div class="search-bar_container">
+          <input class="search-bar" type="text" placeholder="Поиск">
+        </div>
+        <div class="search-btn_container">
+          <button class="search-btn">
+            <span class="material-icons search-icon">search</span>
+          </button>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul class="nav_list list-reset">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="material-icons">person</i>
+              <span class="nav-link_title">Профиль</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="material-icons favs-icon">favorite</i>
+              <span class="nav-link_title">Избранное</span>
+              <div class="favs_quantity js-favs-quantity">0</div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="material-icons">shopping_cart</i>
+              <span class="nav-link_title">Корзина</span>
+              <div class="cart_quantity js-cart-quantity">0</div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <div class="container ">
+      <section class="products">
+       
+       <div class="swiper-container">
+        <div class="product-category">Популярные</div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product-grid js-products-grid">
+             
+            </div>
+          </div> 
+          <div class="swiper-slide">
+            <div class="product-grid js-products-grid">
+             
+            </div>
+          </div> 
+          <div class="swiper-slide">
+            <div class="product-grid js-products-grid">
+             
+            </div>
+          </div>
+       </div>
+       <div class="swiper-button-next"></div>
+       <div class="swiper-button-prev"></div>
+       </div>
+      </section>
+    </div>
+
+    <!-- <div class="product-grid">
+      <div class="product-card">
+        <div class="product-card__img-container">
+          <img class="product-card__img" src="images/018fb053-176e-7493-a6f9-48556946da0f.webp" alt="Обложка книги">
+        </div>
+        <div class="product-card__content">
+          <div class="product-card__price">
+            <span class="product-price__old">530 &#8381; </span>
+            <div class="product-price__new">
+              420 &#8381;
+              <span class="product-price__discount">- 21%</span>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-info__title">
+              SAAAASSSS
+            </div>
+            <div class="product-info__author">
+              Wilkie Collins
+            </div>
+          </div>
+          <div class="product-card__btns">
+            <div class="product-btns__buy">
+              <a class="buy-link" href="#"><button class="buy-btn">В корзину</button></a>
+            </div>
+            <div class="products-btns__fav">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__img-container">
+          <img class="product-card__img" src="images/018fb053-176e-7493-a6f9-48556946da0f.webp" alt="Обложка книги">
+        </div>
+        <div class="product-card__content">
+          <div class="product-card__price">
+            <span class="product-price__old">530 &#8381; </span>
+            <div class="product-price__new">
+              420 &#8381;
+              <span class="product-price__discount">- 21%</span>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-info__title">
+              SAAAASSSS
+            </div>
+            <div class="product-info__author">
+              Wilkie Collins
+            </div>
+          </div>
+          <div class="product-card__btns">
+            <div class="product-btns__buy">
+              <a class="buy-link" href="#"><button class="buy-btn">В корзину</button></a>
+            </div>
+            <div class="products-btns__fav">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__img-container">
+          <img class="product-card__img" src="images/018fb053-176e-7493-a6f9-48556946da0f.webp" alt="Обложка книги">
+        </div>
+        <div class="product-card__content">
+          <div class="product-card__price">
+            <span class="product-price__old">530 &#8381; </span>
+            <div class="product-price__new">
+              420 &#8381;
+              <span class="product-price__discount">- 21%</span>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-info__title">
+              SAAAASSSS
+            </div>
+            <div class="product-info__author">
+              Wilkie Collins
+            </div>
+          </div>
+          <div class="product-card__btns">
+            <div class="product-btns__buy">
+              <a class="buy-link" href="#"><button class="buy-btn">В корзину</button></a>
+            </div>
+            <div class="products-btns__fav">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__img-container">
+          <img class="product-card__img" src="images/018fb053-176e-7493-a6f9-48556946da0f.webp" alt="Обложка книги">
+        </div>
+        <div class="product-card__content">
+          <div class="product-card__price">
+            <span class="product-price__old">530 &#8381; </span>
+            <div class="product-price__new">
+              420 &#8381;
+              <span class="product-price__discount">- 21%</span>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-info__title">
+              SAAAASSSS
+            </div>
+            <div class="product-info__author">
+              Wilkie Collins
+            </div>
+          </div>
+          <div class="product-card__btns">
+            <div class="product-btns__buy">
+              <a class="buy-link" href="#"><button class="buy-btn">В корзину</button></a>
+            </div>
+            <div class="products-btns__fav">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__img-container">
+          <img class="product-card__img" src="images/018fb053-176e-7493-a6f9-48556946da0f.webp" alt="Обложка книги">
+        </div>
+        <div class="product-card__content">
+          <div class="product-card__price">
+            <span class="product-price__old">530 &#8381; </span>
+            <div class="product-price__new">
+              420 &#8381;
+              <span class="product-price__discount">- 21%</span>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-info__title">
+              SAAAASSSS
+            </div>
+            <div class="product-info__author">
+              Wilkie Collins
+            </div>
+          </div>
+          <div class="product-card__btns">
+            <div class="product-btns__buy">
+              <a class="buy-link" href="#"><button class="buy-btn">В корзину</button></a>
+            </div>
+            <div class="products-btns__fav">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__img-container">
+          <img class="product-card__img" src="images/018fb053-176e-7493-a6f9-48556946da0f.webp" alt="Обложка книги">
+        </div>
+        <div class="product-card__content">
+          <div class="product-card__price">
+            <span class="product-price__old">530 &#8381; </span>
+            <div class="product-price__new">
+              420 &#8381;
+              <span class="product-price__discount">- 21%</span>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-info__title">
+              llll
+            </div>
+            <div class="product-info__author">
+              Wilkie Collins
+            </div>
+          </div>
+          <div class="product-card__btns">
+            <div class="product-btns__buy">
+              <a class="buy-link" href="#"><button class="buy-btn">В корзину</button></a>
+            </div>
+            <div class="products-btns__fav">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->   
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-contacts-item">
+          <span class="footer-contacts-text">Телефон</span>
+          <a href="tel:+89586222182" class="footer-contacts-link"
+            >+7 *** *** ** **</a
+          >
+        </div>
+        <div class="footer-contacts-item">
+          <span class="footer-contacts-text">Адрес</span>
+          <a href="tel:+89586222182" class="footer-contacts-link"
+            >Набережные Челны, б-р Автомобилестроителей, д.12</a
+          >
+        </div>
+      </div>
+      <div class="footer-middle">
+        <div class="footer-column">
+          <h3 class="footer-title">Компания</h3>
+          <ul class="footer-list list-reset">
+            <li class="footer-item">
+              <a href="#" class="footer-link">Контакты</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">О нас</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Оплата</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Отзывы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Информация</h3>
+          <ul class="footer-list list-reset">
+            <li class="footer-item">
+              <a href="#" class="footer-link">Магазины</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Условия доставки</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Реквизиты</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Гарантия на товар</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Связь с нами</h3>
+          <a href="mailto:camarik032@gmail.com" class="footer-mail"
+            >camarik032@gmail.com</a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom"></div>
+    </div>
+  </footer>
+
+  <script src="cart.js"></script>
+  
+  <script src="products.js"></script>
+  <script src="showbooks.js"></script>
+  <script src="bookshop.js"></script>
+  <script src="favorite.js"></script>
+  <script src="swiper-bundle.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',  // Позволяет установить произвольную ширину слайда
+  centeredSlides: false,    // Центрирует активный слайд
+  spaceBetween: 20,
+      loop: true,
+      spaceBetween:600,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
