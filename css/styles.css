@@ -1,10 +1,11 @@
 :root {
-    --header-color: #40A578;
-    --btn-color:  #B76E79; 
+    --header-color: #fff;
+    --btn-color:  #c49a77; 
 }
 
 body {
     font-family: Montserrat;
+    
 }
 
 html {
@@ -51,7 +52,7 @@ html {
 .logo {
     font-size: 4rem;
     text-decoration: none;
-    color: #fff;
+    color: #141414;
     margin-right: 50px;
 }
 
@@ -336,7 +337,7 @@ html {
 /* footer */
 .footer {
     padding-top: 50px;
-    color: #fff;
+    color: #141414;
     background-color: var(--header-color);
     padding-bottom: 50px;
   }
@@ -365,7 +366,7 @@ html {
     font-style: normal;
     font-size: 1.6rem;
     line-height: 40px;
-    color: #fff;
+    color: #141414;
     text-decoration: none;
   }
 
@@ -388,7 +389,7 @@ html {
     display: inline-block;
     font-size: 1.6rem;
     line-height: 40px;
-    color: #fff;
+    color: #141414;
     text-decoration: none;
   }
   
@@ -396,7 +397,7 @@ html {
     display: inline-block;
     margin-bottom: 24px;
     font-weight: 700;
-    color: #fff;
+    color: #141414;
     font-size: 2.4rem;
     text-decoration: none;
   }
