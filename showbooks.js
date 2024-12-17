@@ -98,9 +98,7 @@ document.querySelectorAll('.js-products-grid').forEach((grid) => {
 
           if(matchingItem) {
             matchingItem.quantity += 1;
-          }else if (matchingItem.quantity <= 0) {
-            favorites = favorites.filter((item) => item.productId !== productId);
-          } else {
+          }else {
             favorites.push({
               productId: productId,
               quantity: 1
