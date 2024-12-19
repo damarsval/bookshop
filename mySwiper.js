@@ -7,7 +7,6 @@ slides.forEach((el, index) => {
   new Swiper(el, {
     slidesPerView: 'auto',
     spaceBetween: 600,
-    centeredSlides: false,
     loop: true,
     navigation: {
       nextEl: nextButton,
