@@ -283,7 +283,12 @@ html {
     align-items: center;
 }
 
-
+.added-to-cart {
+    background-color: #4caf50;
+    color: white;
+    cursor: not-allowed;
+  }
+  
 
 .favorite-btn {
     background-color: #ffffff;

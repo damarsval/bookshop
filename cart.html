@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+  <header class="header cart-header">
+    <div class="header-container">
+      <div class="logo-cnt">
+        <a href="#" class="logo">Спираль</a>
+      </div>
+      <div class="header-middle">
+        <div class="search-bar_container">
+          <input class="search-bar" type="text" placeholder="Поиск">
+        </div>
+        <div class="search-btn_container">
+          <button class="search-btn">
+            <span class="material-icons search-icon">search</span>
+          </button>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul class="nav_list list-reset">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="material-icons">person</i>
+              <span class="nav-link_title">Профиль</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="material-icons favs-icon">favorite</i>
+              <span class="nav-link_title">Избранное</span>
+              <div class="favs_quantity js-favs-quantity">0</div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="cart.html" class="nav-link">
+              <i class="material-icons">shopping_cart</i>
+              <span class="nav-link_title">Корзина</span>
+              <div class="cart_quantity js-cart-quantity">0</div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="cart-top">
+        <div class="cart-title">Корзина</div>
+        <div class="delete-all">
+          <span class="material-icons">delete</span>
+          <span class="delete-all_title">Очистить корзину</span>
+        </div>
+      </div>        
+        <div class="cart-items js-cart-items"></div>
+        <div class="cart-total">
+          <span class="cart-total-text">Итого:</span>
+          <span class="cart-total-price js-cart-total-price">0 ₽</span>
+        </div>
+        <button class="cart-clear-btn js-cart-clear-btn">Очистить корзину</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2024 Спираль. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>

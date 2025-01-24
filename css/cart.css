@@ -1,0 +1,15 @@
+.cart-header {
+  margin-bottom: 50px;
+}
+
+.cart-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.cart-top {
+  width: calc(100%-480px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

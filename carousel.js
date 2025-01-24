@@ -55,4 +55,10 @@ for (let i = 1; i <= 2; i++) {
   slideGrid.innerHTML = Array(6).fill(createBookHTML(repeatedBook)).join('');
 }
 
+document.querySelectorAll('.buy-btn').forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    addToCart(books[index]); // books - массив из carousel.js
+    alert('Товар добавлен в корзину!');
+  });
+});
 

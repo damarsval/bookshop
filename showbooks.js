@@ -89,42 +89,55 @@ document.querySelectorAll('.js-products-grid').forEach((grid) => {
 
   document.querySelectorAll('.js-products-grid').forEach((grid) => {
     grid.innerHTML = booksHTML2;});
+
+    // Функция для обновления количества товаров в навигации
+/*function updateCartQuantity() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+  document.querySelector('.js-cart-quantity').textContent = cartQuantity;
+}*/
+
+// Вызов функции при загрузке страницы
+updateCartQuantity();
+
   // обработчик корзины
-  document.querySelectorAll('.js-add-to-cart')
-    .forEach((button) => {
-      button.addEventListener('click', () => {
-        const productId = button.dataset.productId;
+  
 
-        let matchingItem;
+document.querySelectorAll('.js-add-to-cart')
+  .forEach((button) => {
+    button.addEventListener('click', () => {
+      const productId = button.dataset.productId;
 
-        cart.forEach((item) => {
-          if (productId === item.productId) {
-            matchingItem = item;
-          }
+      let matchingItem = cart.find(item => item.productId === productId);
+
+      if (matchingItem) {
+        matchingItem.quantity += 1;
+      } else {
+        cart.push({
+          productId: productId,
+          quantity: 1
         });
+      }
 
-        if(matchingItem) {
-          matchingItem.quantity += 1;
-        } else {
-          cart.push({
-            productId: productId,
-            quantity: 1
-          });
-        }
+      const cartQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
-        let cartQuantity = 0;
+      document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 
-        cart.forEach((item) => {
-          cartQuantity += item.quantity;
-        });
+      // Изменение кнопки
+      button.textContent = "Добавлено";
+      button.classList.add('added-to-cart');
+      button.disabled = true;
 
-        document.querySelector('.js-cart-quantity')
-          .innerHTML = cartQuantity;
-        
-        console.log(cartQuantity);
-        console.log(cart);
-      });
+      // Сохранение корзины
+      localStorage.setItem('cart', JSON.stringify(cart));
+      
+      updateCartQuantity();
+
+      console.log(cartQuantity);
+      console.log(cart);
     });
+  });
+
 
     // обработчик избранного
     document.querySelectorAll('.js-add-to-favorite')
