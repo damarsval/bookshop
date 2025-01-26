@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Спираль</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,7 @@
       rel="stylesheet">
   <link rel="stylesheet" href="css/swiper-bundle.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <header class="header">
@@ -19,14 +20,15 @@
         <a href="#" class="logo">Спираль</a>
       </div>
       <div class="header-middle">
-        <div class="search-bar_container">
+        <form class="search-bar_container">
           <input class="search-bar" type="text" placeholder="Поиск">
-        </div>
-        <div class="search-btn_container">
-          <button class="search-btn">
+          <button type="submit" class="search-btn">
             <span class="material-icons search-icon">search</span>
           </button>
-        </div>
+        </form>
+        <!--<div class="search-btn_container">
+          
+        </div>-->
       </div>
       <nav class="nav">
         <ul class="nav_list list-reset">

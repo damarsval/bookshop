@@ -1,0 +1,34 @@
+@media (max-width: 1400px) {
+  .nav-item:not(:last-child) { 
+  margin-right: 15px;
+}
+}
+
+@media (max-width: 1300px) {
+
+  .header-container {
+    padding: 10px 20px;
+  }
+  .nav-item:not(:last-child) { 
+  margin-right: 15px;
+}
+
+.nav-link {
+  font-size: 14px;
+}
+
+
+}
+
+@media (max-width: 1000px) {
+  
+}
+
+@media (max-width: 768px) {
+
+ 
+}
+
+@media (max-width: 480px) {
+
+}
