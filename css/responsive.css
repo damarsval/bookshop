@@ -24,6 +24,88 @@
   
 }
 
+@media (max-width: 1080px) {
+  .burger-menu {
+    display: flex;
+}
+
+/* Навигация (по умолчанию скрыта) */
+.nav {
+  display: flex;
+  flex-direction: column; /* Меню станет вертикальным */
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Фиксируем меню на весь экран */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Занимает всю высоту экрана */
+  background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон */
+  transform: translateY(-100%); /* Прячем меню за пределы экрана */
+  transition: transform 0.3s ease-in-out; /* Анимация открытия */
+  z-index: 100; /* Поверх других элементов */
+  overflow-y: auto; /* Если много элементов, добавляется прокрутка */
+}
+
+/* Когда меню открыто */
+.nav.open {
+  transform: translateY(0); /* Показываем меню */
+}
+
+/* Стили для ссылок в меню */
+.nav_list {
+  display: flex;
+  flex-direction: column; /* Вертикальный список */
+  gap: 50px; /* Расстояние между ссылками */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_item {
+  margin: 0;
+}
+
+.material-icons {
+  margin-right: 5px;
+}
+
+.nav-link_title {
+  font-size: 40px; /* Увеличиваем размер текста */
+  color: #141414;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.n:hover {
+  color: #FFD700; /* Золотистый цвет при наведении */
+}
+
+/* Анимация для кнопки бургер */
+.burger-menu.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.cart_quantity {
+  top: -11px;
+  right: 8px;
+}
+
+.favs_quantity {
+  top: -7px;
+  right: 17px;
+}
+}
+
 @media (max-width: 768px) {
   .burger-menu {
     display: flex;
