@@ -33,9 +33,14 @@
     text-align: left;
   }
 
+  .logo {
+    color: red;
+  }
+
   .nav {
     flex: 1; /* Навигация занимает оставшееся место */
     text-align: right;
+    
   }
 
   .header-middle {
