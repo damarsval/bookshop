@@ -24,7 +24,7 @@
   
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1000px) {
   .header-container {
     flex-wrap: wrap; /* Элементы обтекают друг друга */
     align-items: center; /* Выровнять элементы по центру */
