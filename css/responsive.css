@@ -24,39 +24,68 @@
   
 }
 
-@media (max-width: 1080px) {
-  .burger-menu {
+@media (max-width: 1070px) {
+  .header-container {
+    flex-wrap: wrap; /* Элементы обтекают друг друга */
+    align-items: center; /* Выровнять элементы по центру */
+  }
+
+  .logo-cnt {
+    flex: 1; /* Логотип занимает доступное место */
+    text-align: left;
+  }
+
+  .nav {
+    flex: 1; /* Навигация занимает оставшееся место */
+    text-align: right;
+  }
+
+  .header-middle {
+    order: 3; /* Переместить блок с поиском вниз */
+    width: 100%; /* Растянуть на всю ширину */
+    margin-top: 16px; /* Добавить отступ сверху */
+  }
+
+  .logo {
+    font-size: 7rem;
+    margin-right: 0px;
+}
+
+  .nav-link_title {
+    display: none;
+  }
+  /* .burger-menu {
     display: flex;
 }
 
-/* Навигация (по умолчанию скрыта) */
+
 .nav {
   display: flex;
-  flex-direction: column; /* Меню станет вертикальным */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-  position: fixed; /* Фиксируем меню на весь экран */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Занимает всю высоту экрана */
-  background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон */
-  transform: translateY(-100%); /* Прячем меню за пределы экрана */
-  transition: transform 0.3s ease-in-out; /* Анимация открытия */
-  z-index: 100; /* Поверх других элементов */
-  overflow-y: auto; /* Если много элементов, добавляется прокрутка */
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.95); 
+  transform: translateY(-100%); 
+  transition: transform 0.3s ease-in-out; 
+  z-index: 100; 
+  overflow-y: auto; 
 }
 
-/* Когда меню открыто */
+
 .nav.open {
-  transform: translateY(0); /* Показываем меню */
+  transform: translateY(0); 
 }
 
-/* Стили для ссылок в меню */
+
 .nav_list {
   display: flex;
-  flex-direction: column; /* Вертикальный список */
-  gap: 50px; /* Расстояние между ссылками */
+  flex-direction: column; 
+  gap: 50px; 
   list-style: none;
   margin: 0;
   padding: 0;
@@ -71,7 +100,7 @@
 }
 
 .nav-link_title {
-  font-size: 40px; /* Увеличиваем размер текста */
+  font-size: 40px; 
   color: #141414;
   text-decoration: none;
   font-weight: bold;
@@ -79,10 +108,9 @@
 }
 
 .n:hover {
-  color: #FFD700; /* Золотистый цвет при наведении */
-}
+  color: #FFD700; 
 
-/* Анимация для кнопки бургер */
+
 .burger-menu.active span:nth-child(1) {
   transform: translateY(10px) rotate(45deg);
 }
@@ -103,7 +131,7 @@
 .favs_quantity {
   top: -7px;
   right: 17px;
-}
+} */
 }
 
 @media (max-width: 768px) {
@@ -120,13 +148,10 @@
   position: fixed; /* Фиксируем меню на весь экран */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%; /* Занимает всю высоту экрана */
-  background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон */
+  background-color: white; /* Полупрозрачный белый фон */
   transform: translateY(-100%); /* Прячем меню за пределы экрана */
   transition: transform 0.3s ease-in-out; /* Анимация открытия */
   z-index: 100; /* Поверх других элементов */
-  overflow-y: auto; /* Если много элементов, добавляется прокрутка */
 }
 
 /* Когда меню открыто */
