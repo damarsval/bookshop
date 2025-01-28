@@ -26,16 +26,19 @@
             <span class="material-icons search-icon">search</span>
           </button>
         </form>
-        <!--<div class="search-btn_container">
-          
-        </div>-->
       </div>
+      <button class="burger-menu" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
       <nav class="nav">
         <ul class="nav_list list-reset">
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="material-icons">person</i>
-              <span class="nav-link_title">Профиль</span>
+            <a href="cart.html" class="nav-link">
+              <i class="material-icons">shopping_cart</i>
+              <span class="nav-link_title">Корзина</span>
+              <div class="cart_quantity js-cart-quantity">0</div>
             </a>
           </li>
           <li class="nav-item">
@@ -43,13 +46,6 @@
               <i class="material-icons favs-icon">favorite</i>
               <span class="nav-link_title">Избранное</span>
               <div class="favs_quantity js-favs-quantity">0</div>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="cart.html" class="nav-link">
-              <i class="material-icons">shopping_cart</i>
-              <span class="nav-link_title">Корзина</span>
-              <div class="cart_quantity js-cart-quantity">0</div>
             </a>
           </li>
         </ul>
@@ -195,6 +191,7 @@
 
 
   <script src="js/favorite.js"></script>
+  <script src="js/burger.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/products.js"></script>
   <script src="js/showbooks.js"></script>

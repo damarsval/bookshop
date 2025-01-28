@@ -175,6 +175,29 @@ html {
 
 /* header end */
 
+/* Общий стиль бургер-меню */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 110; /* Чтобы меню было поверх других элементов */
+}
+
+.burger-menu span {
+    display: block;
+    height: 3px;
+    width: 30px;
+    background-color: #141414;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
 /* product start */
 .product-category {
     margin-bottom: 80px;
