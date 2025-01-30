@@ -26,37 +26,57 @@
   .header-container {
     flex-wrap: wrap; /* Элементы обтекают друг друга */
     align-items: center; /* Выровнять элементы по центру */
+    margin: 0 auto;
   }
 
   .logo-cnt {
-    flex: 1; /* Логотип занимает доступное место */
+    padding-left: 10px;
     text-align: left;
-  }
-
-  .logo {
-    color: red;
-  }
-
-  .nav {
-    flex: 1; /* Навигация занимает оставшееся место */
-    text-align: right;
-    
+    margin-right: 550px;
   }
 
   .header-middle {
     order: 3; /* Переместить блок с поиском вниз */
     width: 100%; /* Растянуть на всю ширину */
     margin-top: 16px; /* Добавить отступ сверху */
+    margin-right: 0;
   }
 
+  .logo-cnt {
+    width: 300px;
+  }
   .logo {
-    font-size: 7rem;
-    margin-right: 0px;
+    font-size: 12rem;
 }
 
   .nav-link_title {
     display: none;
   }
+
+  .material-icons {
+    font-size: 50px;
+}
+
+  .nav-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.search-bar_container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  font-size: 25px;
+}
+
+.search-box {
+  line-height: 70px;
+}
+
+.material-icons.search-icon {
+  font-size: 30px;
+}
   /* .burger-menu {
     display: flex;
 }
