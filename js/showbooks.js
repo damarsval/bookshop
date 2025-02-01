@@ -1,94 +1,109 @@
-let booksHTML = ''; 
+// let booksHTML = ''; 
 
-books.forEach((book) => {
-  booksHTML += `
-  <article class="product-card">
-    <div class="product-card__img-container">
-      <img class="product-card__img" src="${book.image}" alt="Обложка книги">
-    </div>
-    <div class="product-card__content">
-     <div class="product-card__price">
-      <span class="product-price__old">${book.oldPrice} </span>
-      <div class="product-price__new">
-                      ${book.newPrice}
-                      <span class="product-price__discount">${book.discount}</span>
-                    </div>
-                  </div>
-                  <div class="product-card__info">
-                    <div class="product-info__title">
-                      ${book.title}
-                    </div>
-                    <div class="product-info__author">
-                      ${book.author}
-                    </div>
-                  </div>
-                  <div class="product-card__btns">
-                    <div class="product-btns__buy">
-                      <a class="buy-link" href="#"><button class="buy-btn js-add-to-cart"
-                      data-product-id="${book.id}"
-                      >В корзину</button></a>
-                    </div>
-                    <div class="products-btns__fav">
-                      <button class = "favorite-btn js-add-to-favorite">
-                      <i class="material-icons favorite-icons">favorite</i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </article>
-  `
+// books.forEach((book) => {
+//   booksHTML += `
+//   <article class="product-card">
+//     <div class="product-card__img-container">
+//       <img class="product-card__img" src="${book.image}" alt="Обложка книги">
+//     </div>
+//     <div class="product-card__content">
+//      <div class="product-card__price">
+//       <span class="product-price__old">${book.oldPrice} </span>
+//       <div class="product-price__new">
+//                       ${book.newPrice}
+//                       <span class="product-price__discount">${book.discount}</span>
+//                     </div>
+//                   </div>
+//                   <div class="product-card__info">
+//                     <div class="product-info__title">
+//                       ${book.title}
+//                     </div>
+//                     <div class="product-info__author">
+//                       ${book.author}
+//                     </div>
+//                   </div>
+//                   <div class="product-card__btns">
+//                     <div class="product-btns__buy">
+//                       <a class="buy-link" href="#"><button class="buy-btn js-add-to-cart"
+//                       data-product-id="${book.id}"
+//                       >В корзину</button></a>
+//                     </div>
+//                     <div class="products-btns__fav">
+//                       <button class = "favorite-btn js-add-to-favorite">
+//                       <i class="material-icons favorite-icons">favorite</i>
+//                       </button>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </article>
+//   `
 
   
-});
+// });
 
 
-document.querySelectorAll('.js-products-grid').forEach((grid) => {
-  grid.innerHTML = booksHTML;});
+// document.querySelectorAll('.js-products-grid').forEach((grid) => {
+//   grid.innerHTML = booksHTML;});
 
-  let booksHTML2 = '';
-  books2.forEach((book) => {
-    booksHTML2 += `
+  // Функция для создания HTML карточки книги
+function createBookCard(book) {
+  return `
     <article class="product-card">
       <div class="product-card__img-container">
         <img class="product-card__img" src="${book.image}" alt="Обложка книги">
       </div>
       <div class="product-card__content">
-       <div class="product-card__price">
-        <span class="product-price__old">${book.oldPrice} </span>
-        <div class="product-price__new">
-                        ${book.newPrice}
-                        <span class="product-price__discount">${book.discount}</span>
-                      </div>
-                    </div>
-                    <div class="product-card__info">
-                      <div class="product-info__title">
-                        ${book.title}
-                      </div>
-                      <div class="product-info__author">
-                        ${book.author}
-                      </div>
-                    </div>
-                    <div class="product-card__btns">
-                      <div class="product-btns__buy">
-                        <a class="buy-link" href="#"><button class="buy-btn js-add-to-cart"
-                        data-product-id="${book.id}"
-                        >В корзину</button></a>
-                      </div>
-                      <div class="products-btns__fav">
-                        <button class = "favorite-btn js-add-to-favorite">
-                        <i class="material-icons favorite-icons">favorite</i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-    `
-  
-    
-  });
+        <div class="product-card__price">
+          <span class="product-price__old">${book.oldPrice}</span>
+          <div class="product-price__new">
+            ${book.newPrice}
+            <span class="product-price__discount">${book.discount}</span>
+          </div>
+        </div>
+        <div class="product-card__info">
+          <div class="product-info__title">${book.title}</div>
+          <div class="product-info__author">${book.author}</div>
+        </div>
+        <div class="product-card__btns">
+          <div class="product-btns__buy">
+            <a class="buy-link" href="#">
+              <button class="buy-btn js-add-to-cart" data-product-id="${book.id}">В корзину</button>
+            </a>
+          </div>
+          <div class="products-btns__fav">
+            <button class="favorite-btn js-add-to-favorite">
+              <i class="material-icons favorite-icons">favorite</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </article>
+  `;
+}
 
-  document.querySelectorAll('.js-products-grid').forEach((grid) => {
-    grid.innerHTML = booksHTML2;});
+// Разделяем книги на группы по 6 книг
+const booksPerSlide = 6;
+const slides = [];
+for (let i = 0; i < books.length; i += booksPerSlide) {
+  const slideBooks = books.slice(i, i + booksPerSlide);
+  slides.push(slideBooks);
+  console.log(i);
+}
+//console.log(slides);
+// Добавляем книги в слайды
+document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+  const grid = slide.querySelector('.js-products-grid');
+  if (slides[index]) {
+    let booksHTML = '';
+    slides[index].forEach((book) => {
+      booksHTML += createBookCard(book);
+    });
+    grid.innerHTML = booksHTML;
+  }
+});
+      console.log(booksHTML);
+
+
 
     // Функция для обновления количества товаров в навигации
 /*function updateCartQuantity() {

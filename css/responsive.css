@@ -1,28 +1,30 @@
-@media (max-width: 1400px) {
-  .nav-item:not(:last-child) { 
-  margin-right: 15px;
-}
-}
-
-@media (max-width: 1300px) {
-
-  .header-container {
-    padding: 10px 20px;
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки на экранах < 1200px */
   }
-  .nav-item:not(:last-child) { 
-  margin-right: 15px;
 }
 
-.nav-link {
-  font-size: 14px;
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки на экранах < 992px */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 колонка на телефонах */
+  }
 }
 
 
-}
-
-
-
-@media (max-width: 1080px) {
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
   .header-container {
     flex-wrap: wrap; /* Элементы обтекают друг друга */
     align-items: center; /* Выровнять элементы по центру */
@@ -32,7 +34,7 @@
   .logo-cnt {
     padding-left: 10px;
     text-align: left;
-    margin-right: 550px;
+    margin-right: 30px;
   }
 
   .header-middle {
@@ -42,12 +44,9 @@
     margin-right: 0;
   }
 
-  .logo-cnt {
-    width: 300px;
-  }
+
   .logo {
-    font-size: 12rem;
-    color: lightblue;
+    font-size: 7rem;
 }
 
   .nav-link_title {
@@ -63,7 +62,6 @@
 }
 
 .search-bar_container {
-  width: 700px;
   margin: 0 auto;
 }
 
@@ -78,165 +76,10 @@
 .material-icons.search-icon {
   font-size: 30px;
 }
-  /* .burger-menu {
-    display: flex;
 }
 
-
-.nav {
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  align-items: center;
-  position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  background-color: rgba(255, 255, 255, 0.95); 
-  transform: translateY(-100%); 
-  transition: transform 0.3s ease-in-out; 
-  z-index: 100; 
-  overflow-y: auto; 
-}
-
-
-.nav.open {
-  transform: translateY(0); 
-}
-
-
-.nav_list {
-  display: flex;
-  flex-direction: column; 
-  gap: 50px; 
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav_item {
-  margin: 0;
-}
-
-.material-icons {
-  margin-right: 5px;
-}
-
-.nav-link_title {
-  font-size: 40px; 
-  color: #141414;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.n:hover {
-  color: #FFD700; 
-
-
-.burger-menu.active span:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
-}
-
-.burger-menu.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.burger-menu.active span:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
-}
-
-.cart_quantity {
-  top: -11px;
-  right: 8px;
-}
-
-.favs_quantity {
-  top: -7px;
-  right: 17px;
-} */
-}
-
-@media (max-width: 768px) {
-  .burger-menu {
-    display: flex;
-}
-
-/* Навигация (по умолчанию скрыта) */
-.nav {
-  display: flex;
-  flex-direction: column; /* Меню станет вертикальным */
-  justify-content: center;
-  align-items: center;
-  position: fixed; /* Фиксируем меню на весь экран */
-  top: 0;
-  left: 0;
-  background-color: white; /* Полупрозрачный белый фон */
-  transform: translateY(-100%); /* Прячем меню за пределы экрана */
-  transition: transform 0.3s ease-in-out; /* Анимация открытия */
-  z-index: 100; /* Поверх других элементов */
-}
-
-/* Когда меню открыто */
-.nav.open {
-  transform: translateY(0); /* Показываем меню */
-}
-
-/* Стили для ссылок в меню */
-.nav_list {
-  display: flex;
-  flex-direction: column; /* Вертикальный список */
-  gap: 50px; /* Расстояние между ссылками */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav_item {
-  margin: 0;
-}
-
-.material-icons {
-  margin-right: 5px;
-}
-
-.nav-link_title {
-  font-size: 40px; /* Увеличиваем размер текста */
-  color: #141414;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.n:hover {
-  color: #FFD700; /* Золотистый цвет при наведении */
-}
-
-/* Анимация для кнопки бургер */
-.burger-menu.active span:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
-}
-
-.burger-menu.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.burger-menu.active span:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
-}
-
-.cart_quantity {
-  top: -11px;
-  right: 8px;
-}
-
-.favs_quantity {
-  top: -7px;
-  right: 17px;
-}
-}
-
+/* Landscape phones and smaller */
 @media (max-width: 480px) {
 
 }
+
