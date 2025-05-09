@@ -1,30 +1,7 @@
-@media (max-width: 1200px) {
-  .product-grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки на экранах < 1200px */
-  }
-}
-
-@media (max-width: 992px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 колонки на экранах < 992px */
-  }
-}
-
-@media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
-  }
-}
-
-@media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: repeat(1, 1fr); /* 1 колонка на телефонах */
-  }
-}
-
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+ 
   .header-container {
     flex-wrap: wrap; /* Элементы обтекают друг друга */
     align-items: center; /* Выровнять элементы по центру */
@@ -32,9 +9,8 @@
   }
 
   .logo-cnt {
-    padding-left: 10px;
     text-align: left;
-    margin-right: 30px;
+    margin-right: 20px;
   }
 
   .header-middle {
@@ -46,7 +22,7 @@
 
 
   .logo {
-    font-size: 7rem;
+    font-size: 3rem;
 }
 
   .nav-link_title {
@@ -54,11 +30,11 @@
   }
 
   .material-icons {
-    font-size: 50px;
+    font-size: 3.5rem;
 }
 
   .nav-item:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .search-bar_container {
@@ -66,7 +42,7 @@
 }
 
 .search-bar {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .search-box {
@@ -76,10 +52,94 @@
 .material-icons.search-icon {
   font-size: 30px;
 }
+
+.footer-middle {
+  padding-top: 60px;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.footer-contacts-item {
+  margin-right: 90px;
+}
+
+.footer-mail {
+  font-size: 2rem;
+}
+
 }
 
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
 
+  .header {
+    margin-bottom: 100px;
+  }
+
+  .nav-link_title {
+    display: none;
+  }
+
+  .material-icons {
+    font-size: 3rem;
+}
+
+  .nav-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.search-bar_container {
+  margin: 0 auto;
+}
+
+.products {
+  margin-bottom: 100px;
+}
+
+.why-us {
+  margin-bottom: 200px;
+}
+
+.footer-contacts-link {
+  font-size: 14px;
+}
+
+.footer-contacts-item {
+    margin-bottom: 30px;
+}
+
+  .footer-middle {
+    padding-top: 60px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+
+}
+
+@media (max-width: 340px) {
+
+  .logo {
+    font-size: 3rem;
+}
+
+.logo-cnt {
+  margin-right: 1px;
+}
+  .nav-link_title {
+    display: none;
+  }
+
+  .material-icons {
+    font-size: 3rem;
+}
+
+  .nav-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.search-bar_container {
+  margin: 0 auto;
+}
 }
 

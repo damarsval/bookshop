@@ -1,0 +1,135 @@
+@media (max-width: 1200px) {
+
+  .cart-item__descr {
+    margin-right: 100px;
+}
+
+  
+
+  .cart-item__btns {
+    right: 50px;
+}
+}
+
+@media (max-width: 1100px) {
+
+  .cart-item__descr {
+    margin-right: 50px;
+}
+
+  .cart-item__btns {
+    right: 50px;
+}
+}
+
+@media (max-width: 1000px) {
+
+  .cart-content {
+    grid-template-columns: 1fr;
+    gap: 100px;
+  }
+
+  .cart-top {
+     width: 100%;
+    display: flex
+;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+  .item-price__old {
+    font-size: 1.4rem;
+    text-decoration: line-through;
+    line-height: 20px;
+  }
+
+  .cart-item__counter {
+    order: 3;
+  }
+
+  .item-price__new {
+    font-size: 1.8rem;
+    color: #eb1b3a;
+  }
+
+  .cart-item__btns {
+    top: 129px;
+  }
+
+  .cart-sidebar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cart-item__right {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+ 
+  .item-icon {
+    font-size: 2.5rem;
+  } 
+
+.footer-middle {
+  padding-top: 60px;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.footer-contacts-item {
+  margin-right: 90px;
+}
+
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
+.cart-title {
+  font-size: 2rem;
+}
+
+.cart_delete {
+  font-size: 2rem;
+}
+
+.why-us {
+  margin-bottom: 200px;
+}
+
+.footer-contacts-link {
+  font-size: 14px;
+}
+
+.footer-contacts-item {
+    margin-bottom: 30px;
+}
+
+.footer-middle {
+    padding-top: 60px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+}
+
+@media (max-width: 375px) {
+
+.logo {
+  font-size: 1.8rem;
+}
+
+.material-icons {
+    font-size: 3rem;
+}
+
+  .nav-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.search-bar_container {
+  margin: 0 auto;
+}
+}

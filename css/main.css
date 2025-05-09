@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+/**, :after, :before
+ {
+    box-sizing: border-box;
+}*/
+
 :root {
     --header-color: #fff;
     --btn-color:  #fff; 
@@ -9,7 +14,7 @@
 
 body {
     font-family: Montserrat;
-    
+    /*background-color: #000;*/
 }
 
 html {
@@ -41,43 +46,46 @@ a {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 
 .header-container {
-   max-width: 1998px;
-   padding: 10px 40px;
+   max-width: 1400px;
+   padding: 10px 60px;
    margin: 0 auto;
    display: flex;
    align-items: center;
+   justify-content: space-between;
 }
 
 .logo-cnt {
+    display: flex;
     padding: 0;
+    margin-right: 50px;
 }
 .logo {
     font-size: 4rem;
     text-decoration: none;
     color: #141414;
-    margin-right: 50px;
+   
 }
 
 /* Поле поиска */
 .header-middle {
    display: flex;
-   width: 100%;
-   margin-right: 30px;
+   width: 80%;
+   margin-right: 10px;
 }
 
 .search-bar_container {
     position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 90%;
     max-height: 50px;
     overflow: hidden; 
-    border-radius: 20px;
+    border-radius: 5px;
 
 }
 
@@ -85,6 +93,7 @@ a {
     flex: 1;
     padding: 10px 12px;
     font-size: 16px;
+    height: 50px;
     outline: none;
     border: none;
     background-color: rgb(240, 240, 240);
@@ -93,7 +102,7 @@ a {
 
 .search-box {
     position: absolute;
-    top: 0;
+    top: 8px;
     right: 0;
     width: 50px;
     height: 100%;
@@ -115,7 +124,7 @@ a {
     display: flex;
     align-items: center;
     list-style: none;
-    
+    padding-top: 10px;
 }
 
 .nav-item {
@@ -128,7 +137,6 @@ a {
 .nav-link {
     text-decoration: none;
     color: #141414;
-    font-size: 16px;
 }
 
 .material-icons {
@@ -141,19 +149,57 @@ a {
     color: gray;
 }
 
+.cart-icon,
+.fav-icon {
+    font-size: 40px;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.fav-icon {
+    position: relative;;
+}
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 8px;
+    font-size: 1.4rem;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    left: -30%;
+    transition: opacity 0.3s;
+}
+
+.cart-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.fav-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
 .favs_quantity,
 .cart_quantity {
+    display: none;
     background-color: rgb(252, 9, 9);
     border-radius: 10px;
     padding: 0px 5px;
     position: absolute;
-    
     font-size: 14px;
 }
 
 .cart_quantity {
-    top: -11px;
-    right: 8px;
+    top: -8px;
+    right: 4px;
     color:#fff;
 }
 
@@ -281,15 +327,14 @@ a {
     font-size: 1.6rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    max-height: 48px; /* Ограничение высоты заголовка */
+    max-height: 48px; 
     overflow: hidden;
-    text-overflow: ellipsis; /* Добавляет многоточие, если текст слишком длинный */
-    white-space: nowrap; /* Текст в одной строке */
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
 }
 
 .product-info__author {
     margin-bottom: 20px;
-    
     color: rgb(146, 145, 145);
     font-size: 1.3rem;
     max-height: 20px; /* Ограничение для автора */
@@ -352,14 +397,15 @@ a {
     position: absolute; /* Добавляем позиционирование */
     top: 50%; /* По центру по вертикали */
     transform: translateY(-50%); /* Центрируем по вертикали */
+    border-radius: 0;
 }
 
 .swiper-button-prev {
-     left: 10px;
+     left: 0;
 }
 
 .swiper-button-next {
-    right: 10px; 
+    right: 0; 
 }
 
 
