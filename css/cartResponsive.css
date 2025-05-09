@@ -88,6 +88,8 @@
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
 
+
+
 .cart-title {
   font-size: 2rem;
 }
@@ -117,9 +119,6 @@
 
 @media (max-width: 375px) {
 
-.logo {
-  font-size: 1.8rem;
-}
 
 .material-icons {
     font-size: 3rem;

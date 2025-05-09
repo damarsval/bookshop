@@ -76,6 +76,10 @@
     margin-bottom: 100px;
   }
 
+  .header-container {
+    padding: 10px 10px;
+  }
+
   .nav-link_title {
     display: none;
   }

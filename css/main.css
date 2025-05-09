@@ -350,12 +350,8 @@ a {
     align-items: center;
 }
 
-.added-to-cart {
-    background-color: #4caf50;
-    color: white;
-    cursor: not-allowed;
-  }
-  
+
+
 
 .favorite-btn {
     background-color: #ffffff;
@@ -383,6 +379,16 @@ a {
     transition: color 0.3s ease;
     margin-right: 2px;
 }
+
+.js-add-to-cart {
+    transition: all 0.3s ease;
+}
+
+.js-add-to-cart.added-to-cart {
+    background-color: #000;
+    color: white;
+    cursor: not-allowed;
+  }
 
 
 /* product end */

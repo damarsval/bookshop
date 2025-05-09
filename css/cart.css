@@ -48,15 +48,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 80px;
 }
 
 .cart-item {
   display: flex;
+  flex: 1;
   align-items: center;
   width: 100%;
+  margin-bottom: 20px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgb(80, 80, 80); 
+  position: relative;
 }
 
 .cart-item__img-container {
+  display: flex;
   height: auto;
 }
 
@@ -71,7 +80,7 @@
   grid-template-columns: 2fr 1fr 1fr;
   width: 100%;
   gap: 20px;
-  position: relative;
+  
   align-items: center;
   
 }
@@ -153,8 +162,8 @@ input[type="number"]:focus {
 .cart-item__btns {
   display: flex;
   position: absolute;
-  right: 120px;
-  top: 104px;
+  right: 0;
+  top: 160px;
   gap: 10px;
 }
 
@@ -173,10 +182,13 @@ input[type="number"]:focus {
 
 .cart-sidebar {
   display: flex;
-  background-color: #f0f0f0;
+  background-color: #f1f4f5;
   padding: 20px;
   min-width: 320px;
+  max-height: 300px;
   padding-top: 25px;
+  position: sticky;
+  top: 200px;
 }
 
 .cart-sidebar__top {
