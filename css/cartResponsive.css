@@ -54,7 +54,8 @@
   }
 
   .cart-item__btns {
-    top: 129px;
+    margin-top: 6px;
+    right: 0;
   }
 
   .cart-sidebar {
@@ -70,7 +71,7 @@
 @media (max-width: 767px) {
  
   .item-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
   } 
 
 .footer-middle {
@@ -119,10 +120,6 @@
 
 @media (max-width: 375px) {
 
-
-.material-icons {
-    font-size: 3rem;
-}
 
   .nav-item:not(:last-child) {
     margin-right: 40px;

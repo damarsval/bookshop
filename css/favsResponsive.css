@@ -1,0 +1,14 @@
+@media (max-width: 480px) {
+
+
+
+.favs-page__title {
+  font-size: 2rem;
+}
+
+.delete-favs {
+  font-size: 1.2rem;
+}
+
+
+}

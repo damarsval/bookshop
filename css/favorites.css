@@ -1,0 +1,46 @@
+.favs-page__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.favs-page__title {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.favs-page__delete-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.delete-favs {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  min-width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.delete-favs__icon {
+  padding-top: 10px;
+}
+
+.favorite-icons_active {
+    color:rgb(250, 161, 176);
+}
+
+.favs-items__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  column-gap: 10px;
+  justify-content: center;
+}

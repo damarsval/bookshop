@@ -26,7 +26,7 @@ const books = [
   }, { 
     id: "BK-04JJZZ",
     image: "images/carr.webp",
-    oldPrice: "1 100 &#8381;",
+    oldPrice: "1&nbsp;100 &#8381;",
     newPrice: "935 &#8381;",
     discount: "- 15%", 
     title: "Слепой цирюльник",
@@ -42,7 +42,7 @@ const books = [
   }, { 
     id: "BK-L5F3CG",
     image: "images/fudz.webp",
-    oldPrice: "1 020 &#8381;",
+    oldPrice: "1&nbsp;020 &#8381;",
     newPrice: "856 &#8381;",
     discount: "- 21%", 
     title: "Оглянись",
@@ -53,31 +53,31 @@ const books = [
   { 
     id: "BK-YF8J7G",
     image: "images/notesfromundeg.jpg",
-    oldPrice: "1 440 &#8381;",
-    newPrice: "1 123 &#8381;",
+    oldPrice: "1&nbsp;440 &#8381;",
+    newPrice: "1&nbsp;123 &#8381;",
     discount: "- 22%", 
     title: "Записки из подполья. Повести и рассказы",
     author: "Федор Достоевский" 
   }, {
     id: "BK-FPXGSJ", 
     image: "images/krut.webp",
-    oldPrice: "1 553 &#8381;",
-    newPrice: "1 169 &#8381;",
+    oldPrice: "1&nbsp;553 &#8381;",
+    newPrice: "1&nbsp;169 &#8381;",
     discount: "- 24%", 
     title: "Круть",
     author: "Виктор Пелевин" 
   }, {
     id: "BK-8UBKPO", 
     image: "images/wheel.webp",
-    oldPrice: "2 005 &#8381;",
-    newPrice: "1 630 &#8381;",
+    oldPrice: "2&nbsp;005 &#8381;",
+    newPrice: "1&nbsp;630 &#8381;",
     discount: "- 19%", 
     title: "Колесо Времени. Книга 14. Память Света",
     author: "Роберт Джордан, Брендон Сандерсон" 
   }, { 
     id: "BK-89CIZLZ",
     image: "images/ruskitchen.webp",
-    oldPrice: "1 096 &#8381;",
+    oldPrice: "1&nbsp;096 &#8381;",
     newPrice: "836 &#8381;",
     discount: "- 24%", 
     title: "Русская кухня. Большая книга рецептов",
@@ -85,8 +85,8 @@ const books = [
   }, { 
     id: "BK-TZ8QSD",
     image: "images/thegrayhouse.webp",
-    oldPrice: "2 099 &#8381;",
-    newPrice: "1 499 &#8381;",
+    oldPrice: "2&nbsp;099 &#8381;",
+    newPrice: "1&nbsp;499 &#8381;",
     discount: "- 29%", 
     title: "Дом, в котором...",
     author: "Мариам Петросян" 
@@ -104,7 +104,7 @@ const books = [
   {
     id: "BK-ZWHO9J", 
     image: "images/backman.webp",
-    oldPrice: "1 101 &#8381;",
+    oldPrice: "1&nbsp;101 &#8381;",
     newPrice: "839 &#8381;",
     discount: "- 24%", 
     title: "Тревожные люди",
@@ -113,15 +113,15 @@ const books = [
    {
     id: "BK-8GDTMU", 
     image: "images/oil.webp",
-    oldPrice: "1 379 &#8381;",
-    newPrice: "1 019 &#8381;",
+    oldPrice: "1&nbsp;379 &#8381;",
+    newPrice: "1&nbsp;019 &#8381;",
     discount: "- 26%", 
     title: "Масло",
     author: "Асако Юзуки" 
   }, { 
     id: "BK-40VJIZ",
     image: "images/forest.webp",
-    oldPrice: "1 034 &#8381;",
+    oldPrice: "1&nbsp;034 &#8381;",
     newPrice: "764 &#8381;",
     discount: "- 26%", 
     title: "Лес",
@@ -129,7 +129,7 @@ const books = [
   }, { 
     id: "BK-TU9LSK",
     image: "images/vegetation.webp",
-    oldPrice: "1 028 &#8381;",
+    oldPrice: "1&nbsp;028 &#8381;",
     newPrice: "734 &#8381;",
     discount: "- 29%", 
     title: "Вегетация",
@@ -284,7 +284,7 @@ const books3 = [
   }, {
     id: "BK-7U5HSJ", 
     image: "images/blindspot.webp",
-    oldPrice: "1 297 &#8381;",
+    oldPrice: "1&nbsp;297 &#8381;",
     newPrice: "989 &#8381;",
     discount: "- 24%", 
     title: "Ложная слепота",
@@ -300,8 +300,8 @@ const books3 = [
   }, { 
     id: "BK-VН3YXZ",
     image: "images/odyssey.webp",
-    oldPrice: "1 415 &#8381;",
-    newPrice: "1 079 &#8381;",
+    oldPrice: "1&nbsp;415 &#8381;",
+    newPrice: "1&nbsp;079 &#8381;",
     discount: "- 24%", 
     title: "Илиада. Одиссея",
     author: "Гомер" 
@@ -341,16 +341,16 @@ const books3 = [
 }, {
   id: "BK-S1JIAK", 
   image: "images/firstlaw.webp",
-  oldPrice: "3 067 &#8381;",
-  newPrice: "2 339 &#8381;",
+  oldPrice: "3&nbsp;067 &#8381;",
+  newPrice: "2&nbsp;339 &#8381;",
   discount: "- 24%", 
   title: "Первый закон. Трилогия",
   author: "Джо Аберкромби" 
 }, { 
   id: "BK-NC5LT6",
   image: "images/neuromancer.webp",
-  oldPrice: "1 651 &#8381;",
-  newPrice: "1 259 &#8381;",
+  oldPrice: "1&nbsp;651 &#8381;",
+  newPrice: "1&nbsp;259 &#8381;",
   discount: "- 24%", 
   title: `Нейромант. Трилогия "Киберпространство"`,
   author: "Уильям Гибсон" 
@@ -373,7 +373,7 @@ const books3 = [
   author: "Федор Достоевский" 
 }, { 
   id: "BK-H4VLNG",
-  image: "images/letters.webp",
+  image: "images/prince.webp",
   oldPrice: "359 &#8381;",
   newPrice: "284 &#8381;",
   discount: "- 21%", 

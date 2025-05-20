@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Корзина</title>
+  <title>Спираль</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-  rel="stylesheet">
+      rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper-bundle.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/cart.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/cartResponsive.css">
+  <link rel="stylesheet" href="css/favorites.css">
+  <link rel="stylesheet" href="css/favsResponsive.css">
 </head>
 <body>
-  <header class="header cart-header">
+  <header class="header">
     <div class="header-container">
       <div class="logo-cnt">
         <a href="/index.html" class="logo">Спираль</a>
@@ -36,7 +40,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/favorites.html" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="material-icons fav-icon">favorite
                 <span class="tooltip">Избранное</span>
               </i>
@@ -48,78 +52,29 @@
     </div>
   </header>
   
-  <div>
-    <div class="container cart-container">
-        <div class="cart-top">
-          <div class="cart-title">Корзина</div>
-          <div class="delete-all">
-            <span class="material-icons cart_delete">delete</span>
-            <span class="delete-all_title">Очистить корзину</span>
+  <main>
+    <div class="container favs-container">
+      <div class="favs-page__top">
+        <div class="favs-page__title-wrapper">
+          <div class="favs-page__title">Избранное</div>
+        </div>
+          <div class="favs-page__delete-wrapper">
+            <button type="button" class="delete-favs js-delete-all-favs">
+              <span class="material-icons delete-favs__icon">delete</span>
+              <span class="delete-all_title">Удалить все</span>
+            </button>
+            
           </div>
-        </div> 
-        <div class="cart-content">
-          <div class="cart-items js-cart-items">
-            <div class="cart-item">
-              <div class="cart-item__img-container">
-                <img src="/images/crime.webp" alt="">
-              </div>
-              <div class="cart-item__right">
-                <div class="cart-item__descr">
-                  <div class="cart-item__title">
-                    Преступление и наказание
-                  </div>
-                  <div class="cart-item__author">
-                    Федор Достоевский
-                  </div>
-                </div>
-                <div class="cart-item__counter">
-                  <div class="cart-item__quantity">
-                    <button class="item-quantity__btn cart-item__min">-</button>
-                    <input type="number" class="item-quantity__counter">
-                    <button class="item-quantity__btn cart-item__plus">+</button>
-                  </div>
-                  <div class="cart-item__unit">
-  
-                  </div>
-  
-                </div>
-                <div class="item-price">
-                  <div class="item-price__old">388 &#8381</div>
-                  <div class="item-price__new">296 &#8381</div>
-                </div>
-                <div class="cart-item__btns">
-                <button class="cart-item__btns-btn">
-                  <span class="material-icons item-icon">bookmark</span>
-                </button>
-                <button class="cart-item__btns-btn">
-                  <span class="material-icons item-icon">delete</span>
-                </button>
-              </div>
-              </div>
+          
+      </div>
+      <div class="favs-items__wrapper">
+            <div class="favs-items__content js-favs-items">
               
             </div>
           </div>
-          <div class="cart-sidebar">
-            <div class="cart-sidebar__top">
-              <div class="info-item top-info__item">
-                <div class="info-item_title">1 товар</div>
-                <div class="info-item__value">388 &#8381</div>
-              </div>
-              <div class="info-item top-info__item--disc">
-                <div class="info-item_title">Скидка</div>
-                <div class="info-item__value">-92 &#8381</div>
-              </div>
-              <div class="info-item top-info__item--amount">
-                <div class="info-item_title">Итого</div>
-                <div class="info-item__value info-item__amount">296 &#8381</div>
-              </div>
-            </div>
-        </div>      
-    </div>
-    </div>
-  
+  </div>
+      
   </main>
-
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -180,6 +135,17 @@
     </div>
   </footer>
 
+
+  <script src="js/favorites.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/books.js"></script>
+  <script src="js/showbooks.js"></script>
+  <script src="js/bookshop.js"></script>
+  <script src="js/swiper-bundle.js"></script>
+  <script src="js/mySwiper.js"></script>
+  <script>
+  
+    
+  </script>
 </body>
 </html>

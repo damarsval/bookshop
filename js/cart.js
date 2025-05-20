@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="cart-item__descr">
             <div class="cart-item__title">${item.title}</div>
             <div class="cart-item__author">${item.author}</div>
+            <div class=cart-item__weight">0.15 кг</div>
           </div>
           <div class="cart-item__counter">
             <div class="cart-item__quantity">
@@ -134,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
     const existingItem = cart.find(item => item.id === product.id);
+    //console.log(existingItem);
     
     if (existingItem) {
       existingItem.quantity += 1;
@@ -149,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
     
+
     saveCart();
     updateCartUI();
     
@@ -158,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Функция обновления количества товара
   function updateQuantity(productId, newQuantity) {
     const item = cart.find(item => item.id === productId);
+    
     if (item) {
       item.quantity = newQuantity;
       saveCart();
@@ -212,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
       notification.classList.add('hidden');
     }, 3000);
   }
-  
+
   // Функция для правильного склонения слов
   function getPlural(number, titles) {
     const cases = [2, 0, 1, 1, 1, 2];
@@ -233,15 +237,19 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
   }
 
+      const priceText = productCard.querySelector('.product-price__new')?.textContent || '0';
+      const oldPriceText = productCard.querySelector('.product-price__old')?.textContent || '0';
+
       const product = {
         id: this.dataset.productId,
         title: productCard.querySelector('.product-info__title').textContent,
         author: productCard.querySelector('.product-info__author').textContent,
-        price: parseFloat(productCard.querySelector('.product-price__new').textContent),
-        oldPrice: parseFloat(productCard.querySelector('.product-price__old')?.textContent || 0),
+        price: parseFloat(priceText.replace(/\s|₽/g, '')),
+        oldPrice: parseFloat(oldPriceText.replace(/\s|₽/g, '')),
         image: productCard.querySelector('.product-card__img').src
       };
-      console.log(product);
+
+      //console.log(product);
       addToCart(product);
     });
   });

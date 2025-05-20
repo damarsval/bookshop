@@ -19,12 +19,10 @@ function createBookCard(book) {
         </div>
         <div class="product-card__btns">
           <div class="product-btns__buy">
-            <a class="buy-link" href="#">
-              <button data-cart type="button" class="buy-btn js-add-to-cart" data-product-id="${book.id}">В корзину</button>
-            </a>
+            <button data-cart type="button" class="buy-btn js-add-to-cart" data-product-id="${book.id}">В корзину</button>
           </div>
           <div class="products-btns__fav">
-            <button class="favorite-btn js-add-to-favorite">
+            <button class="favorite-btn js-add-to-favorite" data-product-id="${book.id}">
               <i class="material-icons favorite-icons">favorite</i>
             </button>
           </div>
@@ -32,6 +30,7 @@ function createBookCard(book) {
       </div>
     </article>
   `;
+   
 }
 
 function getBookArray(book) {
