@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="cart-item__descr">
             <div class="cart-item__title">${item.title}</div>
             <div class="cart-item__author">${item.author}</div>
-            <div class=cart-item__weight">0.15 кг</div>
+            <div class="cart-item__weight">${item.weight}</div>
           </div>
           <div class="cart-item__counter">
             <div class="cart-item__quantity">
@@ -147,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
         price: product.price,
         oldPrice: product.oldPrice,
         image: product.image,
+        weight: product.weight,
         quantity: 1
       });
     }
@@ -246,10 +247,11 @@ document.addEventListener('DOMContentLoaded', function() {
         author: productCard.querySelector('.product-info__author').textContent,
         price: parseFloat(priceText.replace(/\s|₽/g, '')),
         oldPrice: parseFloat(oldPriceText.replace(/\s|₽/g, '')),
-        image: productCard.querySelector('.product-card__img').src
+        image: productCard.querySelector('.product-card__img').src,
+        weight: productCard.getAttribute('product-weight')
       };
 
-      //console.log(product);
+      console.log(product);
       addToCart(product);
     });
   });

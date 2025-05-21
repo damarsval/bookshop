@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Спираль</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Prata&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <link rel="stylesheet" href="css/swiper-bundle.css">
@@ -17,16 +17,18 @@
   <header class="header">
     <div class="header-container">
       <div class="logo-cnt">
+        <img class="logo-img" src="images/logo/spiral.png" alt="logo"/>
         <a href="index.html" class="logo">Спираль</a>
       </div>
-      <div class="header-middle">
-        <form class="search-bar_container">
-          <input class="search-bar" type="text" placeholder="Поиск">
-          <label for="" class="search-box">
-            <i class="material-icons search-icon">search</i>
-          </label>
-        </form>
-      </div>
+     <div class="header-middle">
+  <form class="search-bar_container">
+    <input class="search-bar" id="searchInput" type="text" placeholder="Поиск">
+    <label for="" class="search-box">
+      <i class="material-icons search-icon">search</i>
+    </label>
+    
+  </form>
+</div>
       <nav class="nav">
         <ul class="nav_list list-reset">
           <li class="nav-item">
@@ -50,6 +52,8 @@
     </div>
   </header>
   
+  <div id="searchResults" class="search-results"></div>
+
   <main>
     <div class="container ">
       <section class="products">
@@ -391,9 +395,11 @@
   <script src="js/favorites.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/books.js"></script>
+  <script src="js/search.js"></script>
   <script src="js/showbooks.js"></script>
   <script src="js/bookshop.js"></script>
   <script src="js/swiper-bundle.js"></script>
   <script src="js/mySwiper.js"></script>
+  
 </body>
 </html>

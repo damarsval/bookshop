@@ -91,22 +91,18 @@
 
 .cart-item__title {
   font-size: 1.6rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  max-height: 48px;
-  margin-bottom: 4px;
 }
 
 .cart-item__author {
-  color: rgb(146, 145, 145);
+  color: rgb(145, 145, 145);
   font-size: 1.4rem;
   padding-top: 6px;
-  margin-bottom: 4px;
 }
 
 .cart-item__weight {
-  color: rgb(140, 140, 140);
+  color: rgb(145, 145, 145);
   font-size: 1.2rem;
+  padding-top: 6px;
 }
 
 .cart-item__counter {

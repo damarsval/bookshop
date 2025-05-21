@@ -1,7 +1,7 @@
   // Функция для создания HTML карточки книги
 function createBookCard(book) {
   return `
-    <article class="product-card" data-id = "${book.id}">
+    <article class="product-card" data-id = "${book.id}" product-weight = "${book.weight}">
       <div class="product-card__img-container">
         <img class="product-card__img" src="${book.image}" alt="Обложка книги">
       </div>

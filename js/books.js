@@ -1,4 +1,4 @@
-const books = [
+window.books = [
   { 
     id: "BK-ZY8J7G",
     image: "images/thh.webp",
@@ -6,7 +6,8 @@ const books = [
     newPrice: "420 &#8381;",
     discount: "- 15%", 
     title: "The Haunted Hotel",
-    author: "Wilkie Collins" 
+    author: "Wilkie Collins",
+    weight: "0.27 кг" 
   }, {
     id: "BK-OPLGSJ", 
     image: "images/osamu.webp",
@@ -14,7 +15,8 @@ const books = [
     newPrice: "264 &#8381;",
     discount: "- 20%", 
     title: "Человек недостойный",
-    author: "Осаму Дадзай" 
+    author: "Осаму Дадзай",
+    weight: "0.15 кг" 
   }, {
     id: "BK-6S6DDD", 
     image: "images/hawking.webp",
@@ -22,7 +24,8 @@ const books = [
     newPrice: "315 &#8381;",
     discount: "- 30%", 
     title: "Теория всего",
-    author: "Стивен Хокинг" 
+    author: "Стивен Хокинг",
+    weight: "0.19 кг" 
   }, { 
     id: "BK-04JJZZ",
     image: "images/carr.webp",
@@ -30,7 +33,8 @@ const books = [
     newPrice: "935 &#8381;",
     discount: "- 15%", 
     title: "Слепой цирюльник",
-    author: "Джон Карр" 
+    author: "Джон Карр",
+    weight: "0.83 кг"  
   }, { 
     id: "BK-TZ4UAK",
     image: "images/goldcow.webp",
@@ -38,7 +42,8 @@ const books = [
     newPrice: "434 &#8381;",
     discount: "- 30%", 
     title: "Золотой теленок",
-    author: "Илья Ильф, Евгений Петров" 
+    author: "Илья Ильф, Евгений Петров",
+    weight: "0.21 кг"  
   }, { 
     id: "BK-L5F3CG",
     image: "images/fudz.webp",
@@ -46,7 +51,8 @@ const books = [
     newPrice: "856 &#8381;",
     discount: "- 21%", 
     title: "Оглянись",
-    author: "Фудзимото Тацуки" 
+    author: "Фудзимото Тацуки",
+    weight: "0.26 кг"  
   }, 
   
 
@@ -57,7 +63,8 @@ const books = [
     newPrice: "1&nbsp;123 &#8381;",
     discount: "- 22%", 
     title: "Записки из подполья. Повести и рассказы",
-    author: "Федор Достоевский" 
+    author: "Федор Достоевский",
+    weight: "0.19 кг"  
   }, {
     id: "BK-FPXGSJ", 
     image: "images/krut.webp",
@@ -65,7 +72,8 @@ const books = [
     newPrice: "1&nbsp;169 &#8381;",
     discount: "- 24%", 
     title: "Круть",
-    author: "Виктор Пелевин" 
+    author: "Виктор Пелевин",
+    weight: "0.49 кг"  
   }, {
     id: "BK-8UBKPO", 
     image: "images/wheel.webp",
@@ -73,7 +81,8 @@ const books = [
     newPrice: "1&nbsp;630 &#8381;",
     discount: "- 19%", 
     title: "Колесо Времени. Книга 14. Память Света",
-    author: "Роберт Джордан, Брендон Сандерсон" 
+    author: "Роберт Джордан, Брендон Сандерсон",
+    weight: "1.19 кг"  
   }, { 
     id: "BK-89CIZLZ",
     image: "images/ruskitchen.webp",
@@ -81,7 +90,8 @@ const books = [
     newPrice: "836 &#8381;",
     discount: "- 24%", 
     title: "Русская кухня. Большая книга рецептов",
-    author: "Е. Носкова" 
+    author: "Е. Носкова",
+    weight: "0.90 кг"  
   }, { 
     id: "BK-TZ8QSD",
     image: "images/thegrayhouse.webp",
@@ -89,7 +99,8 @@ const books = [
     newPrice: "1&nbsp;499 &#8381;",
     discount: "- 29%", 
     title: "Дом, в котором...",
-    author: "Мариам Петросян" 
+    author: "Мариам Петросян",
+    weight: "1.02 кг"  
   }, { 
     id: "BK-YF5CIG",
     image: "images/thousandfaces.webp",
@@ -97,7 +108,8 @@ const books = [
     newPrice: "481 &#8381;",
     discount: "- 28%", 
     title: "Тысячеликий герой (#экопокет)",
-    author: "Джозеф Кэмпбелл" 
+    author: "Джозеф Кэмпбелл",
+    weight: "0.35 кг"  
   },
   
   
@@ -108,7 +120,8 @@ const books = [
     newPrice: "839 &#8381;",
     discount: "- 24%", 
     title: "Тревожные люди",
-    author: "Фредрик Бакман" 
+    author: "Фредрик Бакман",
+    weight: "0.43 кг"  
   },
    {
     id: "BK-8GDTMU", 
@@ -117,7 +130,8 @@ const books = [
     newPrice: "1&nbsp;019 &#8381;",
     discount: "- 26%", 
     title: "Масло",
-    author: "Асако Юзуки" 
+    author: "Асако Юзуки",
+    weight: "0.55 кг"  
   }, { 
     id: "BK-40VJIZ",
     image: "images/forest.webp",
@@ -125,7 +139,8 @@ const books = [
     newPrice: "764 &#8381;",
     discount: "- 26%", 
     title: "Лес",
-    author: "Светлана Тюльбашева" 
+    author: "Светлана Тюльбашева",
+    weight: "0.42 кг"  
   }, { 
     id: "BK-TU9LSK",
     image: "images/vegetation.webp",
@@ -133,7 +148,8 @@ const books = [
     newPrice: "734 &#8381;",
     discount: "- 29%", 
     title: "Вегетация",
-    author: "Алексей Иванов" 
+    author: "Алексей Иванов",
+    weight: "0.60 кг"  
   }, 
 ];
 
@@ -145,7 +161,8 @@ const books2 = [
     newPrice: "284 &#8381;",
     discount: "- 21%", 
     title: "Гранатовый браслет",
-    author: "Александр Куприн" 
+    author: "Александр Куприн",
+    weight: "0.32 кг"  
   }, {
     id: "BK-OPLISJ", 
     image: "images/crime.webp",
@@ -153,7 +170,8 @@ const books2 = [
     newPrice: "296 &#8381;",
     discount: "- 24%", 
     title: "Преступление и наказание",
-    author: "Федор Достоевский" 
+    author: "Федор Достоевский",
+    weight: "0.32 кг"  
   }, {
     id: "BK-6L8NID", 
     image: "images/dno.webp",
@@ -161,7 +179,8 @@ const books2 = [
     newPrice: "284 &#8381;",
     discount: "- 21%", 
     title: "На дне",
-    author: "Максим Горький" 
+    author: "Максим Горький",
+    weight: "0.23 кг"  
   }, { 
     id: "BK-04MYXZ",
     image: "images/fathers.webp",
@@ -169,7 +188,8 @@ const books2 = [
     newPrice: "278 &#8381;",
     discount: "- 16%", 
     title: "Отцы и дети",
-    author: "Иван Тургенев" 
+    author: "Иван Тургенев",
+    weight: "0.20 кг"  
   }, { 
     id: "BK-IJHZHF",
     image: "images/faust.webp",
@@ -177,7 +197,8 @@ const books2 = [
     newPrice: "296 &#8381;",
     discount: "- 24%", 
     title: "Фауст",
-    author: "И. В. Гёте" 
+    author: "И. В. Гёте",
+    weight: "0.26 кг"  
   }, { 
     id: "BK-YGZ4SZ",
     image: "images/gore.webp",
@@ -185,7 +206,8 @@ const books2 = [
     newPrice: "284 &#8381;",
     discount: "- 21%", 
     title: "Горе от ума",
-    author: "Александр Грибоедов" 
+    author: "Александр Грибоедов",
+    weight: "0.18 кг"  
   },
 
  { id: "BK-ZC8J7G",
@@ -194,7 +216,8 @@ const books2 = [
   newPrice: "296 &#8381;",
   discount: "- 24%", 
   title: "Джейн Эйр",
-  author: "Шарлотта Бронте" 
+  author: "Шарлотта Бронте",
+  weight: "0.32 кг"  
 }, {
   id: "BK-OPUPZJ", 
   image: "images/lord.webp",
@@ -202,7 +225,8 @@ const books2 = [
   newPrice: "341 &#8381;",
   discount: "- 24%", 
   title: "Повелитель мух",
-  author: "Уильям Голдинг" 
+  author: "Уильям Голдинг",
+  weight: "0.23 кг"  
 }, {
   id: "BK-X4YGAB", 
   image: "images/martin.webp",
@@ -210,7 +234,8 @@ const books2 = [
   newPrice: "287 &#8381;",
   discount: "- 24%", 
   title: "Мартин Иден",
-  author: "Джек Лондон" 
+  author: "Джек Лондон",
+  weight: "0.23 кг"  
 }, { 
   id: "BK-VZXCQ6",
   image: "images/mouse.webp",
@@ -218,7 +243,8 @@ const books2 = [
   newPrice: "332 &#8381;",
   discount: "- 24%", 
   title: "О мышах и людях",
-  author: "Джон Стейнбек" 
+  author: "Джон Стейнбек",
+  weight: "0.16 кг" 
 },
 { 
   id: "BK-04JJZZ",
@@ -227,7 +253,8 @@ const books2 = [
   newPrice: "278 &#8381;",
   discount: "- 16%", 
   title: "Портрет Дориана Грея",
-  author: "Оскар Уайльд" 
+  author: "Оскар Уайльд",
+  weight: "0.20 кг" 
 }, { 
   id: "BK-CG3YAK",
   image: "images/pride.webp",
@@ -235,7 +262,8 @@ const books2 = [
   newPrice: "299 &#8381;",
   discount: "- 18%", 
   title: "Гордость и предубеждение",
-  author: "Джейн Остин" 
+  author: "Джейн Остин",
+  weight: "0.27 кг" 
 }, { 
   id: "BK-L5IHCG",
   image: "images/prince.webp",
@@ -243,7 +271,8 @@ const books2 = [
   newPrice: "278 &#8381;",
   discount: "- 16%", 
   title: "Маленький принц",
-  author: "Антуан де Сент-Экзюпери" 
+  author: "Антуан де Сент-Экзюпери",
+  weight: "0.15 кг" 
 },
 { 
   id: "BK-E6GLSR",
@@ -252,7 +281,8 @@ const books2 = [
   newPrice: "611 &#8381;",
   discount: "- 15%", 
   title: "Степной волк",
-  author: "Герман Гессе" 
+  author: "Герман Гессе",
+  weight: "0.21 кг" 
 }, { 
   id: "BK-K7NUAK",
   image: "images/us.webp",
@@ -260,15 +290,17 @@ const books2 = [
   newPrice: "284 &#8381;",
   discount: "- 21%", 
   title: "Мы",
-  author: "Евгений Замятин" 
+  author: "Евгений Замятин",
+  weight: "0.15 кг" 
 }, { 
-  id: "BK-B9BLSN",
-  image: "images/gates.webp",
-  oldPrice: "447 &#8381;",
-  newPrice: "341 &#8381;",
-  discount: "- 24%", 
-  title: "Ворота Расёмон",
-  author: "Рюноскэ Акутагава" 
+    id: "BK-B9BLSN",
+    image: "images/gates.webp",
+    oldPrice: "447 &#8381;",
+    newPrice: "341 &#8381;",
+    discount: "- 24%", 
+    title: "Ворота Расёмон",
+    author: "Рюноскэ Акутагава",
+    weight: "0.28 кг" 
 }
 ];
 
@@ -280,7 +312,8 @@ const books3 = [
     newPrice: "278 &#8381;",
     discount: "- 16%", 
     title: "Униженные и оскорбленные",
-    author: "Федор Достоевский" 
+    author: "Федор Достоевский",
+    weight: "0.28 кг" 
   }, {
     id: "BK-7U5HSJ", 
     image: "images/blindspot.webp",
@@ -288,7 +321,8 @@ const books3 = [
     newPrice: "989 &#8381;",
     discount: "- 24%", 
     title: "Ложная слепота",
-    author: "Питер Уоттс" 
+    author: "Питер Уоттс",
+    weight: "0.48 кг" 
   }, {
     id: "BK-R5IHLD", 
     image: "images/usualstory.webp",
@@ -296,7 +330,8 @@ const books3 = [
     newPrice: "296 &#8381;",
     discount: "- 24%", 
     title: "Обыкновенная история",
-    author: "Иван Гончаров" 
+    author: "Иван Гончаров",
+    weight: "0.30 кг" 
   }, { 
     id: "BK-VН3YXZ",
     image: "images/odyssey.webp",
@@ -304,7 +339,8 @@ const books3 = [
     newPrice: "1&nbsp;079 &#8381;",
     discount: "- 24%", 
     title: "Илиада. Одиссея",
-    author: "Гомер" 
+    author: "Гомер",
+    weight: "0.91 кг" 
   }, { 
     id: "BK-R5ZASQ",
     image: "images/timemachine.webp",
@@ -312,7 +348,8 @@ const books3 = [
     newPrice: "323 &#8381;",
     discount: "- 24%", 
     title: "Машина времени. Остров доктора Моро",
-    author: "Герберт Уэллс" 
+    author: "Герберт Уэллс",
+    weight: "0.24 кг" 
   }, { 
     id: "BK-HY8CZQ",
     image: "images/ctulhu.webp",
@@ -320,16 +357,19 @@ const books3 = [
     newPrice: "701 &#8381;",
     discount: "- 24%", 
     title: "Зов Ктулху",
-    author: "Говард Филлипс Лавкрафт" 
+    author: "Говард Филлипс Лавкрафт",
+    weight: "0.42 кг" 
   },
 
- { id: "BK-T5ZAGQ",
+ { 
+  id: "BK-T5ZAGQ",
   image: "images/chehov.webp",
   oldPrice: "860 &#8381;",
   newPrice: "656 &#8381;",
   discount: "- 24%", 
   title: "Малое собрание сочинений",
-  author: "Антон Чехов" 
+  author: "Антон Чехов",
+  weight: "0.87 кг" 
 }, {
   id: "BK-OYJPZJ", 
   image: "images/android.webp",
@@ -337,7 +377,8 @@ const books3 = [
   newPrice: "611 &#8381;",
   discount: "- 24%", 
   title: "Мечтают ли андроиды об электроовцах?",
-  author: "Филип Киндред Дик" 
+  author: "Филип Киндред Дик",
+  weight: "0.32 кг" 
 }, {
   id: "BK-S1JIAK", 
   image: "images/firstlaw.webp",
@@ -345,7 +386,8 @@ const books3 = [
   newPrice: "2&nbsp;339 &#8381;",
   discount: "- 24%", 
   title: "Первый закон. Трилогия",
-  author: "Джо Аберкромби" 
+  author: "Джо Аберкромби",
+  weight: "1.48 кг" 
 }, { 
   id: "BK-NC5LT6",
   image: "images/neuromancer.webp",
@@ -353,7 +395,8 @@ const books3 = [
   newPrice: "1&nbsp;259 &#8381;",
   discount: "- 24%", 
   title: `Нейромант. Трилогия "Киберпространство"`,
-  author: "Уильям Гибсон" 
+  author: "Уильям Гибсон",
+  weight: "1 кг" 
 },
 { 
   id: "BK-F6KHFC",
@@ -362,7 +405,8 @@ const books3 = [
   newPrice: "278 &#8381;",
   discount: "- 16%", 
   title: "Золотой Храм",
-  author: "Юкио Мисима" 
+  author: "Юкио Мисима",
+  weight: "0.15 кг" 
 }, { 
   id: "BK-T2XZWJ",
   image: "images/player.webp",
@@ -370,7 +414,8 @@ const books3 = [
   newPrice: "284 &#8381;",
   discount: "- 21%", 
   title: "Игрок",
-  author: "Федор Достоевский" 
+  author: "Федор Достоевский",
+  weight: "0.24 кг" 
 }, { 
   id: "BK-H4VLNG",
   image: "images/prince.webp",
@@ -378,7 +423,8 @@ const books3 = [
   newPrice: "284 &#8381;",
   discount: "- 21%", 
   title: "Маленький принц",
-  author: "Антуан де Сент-Экзюпери" 
+  author: "Антуан де Сент-Экзюпери",
+  weight: "0.28 кг" 
 },
 { 
   id: "BK-E6GLSR",
@@ -387,7 +433,8 @@ const books3 = [
   newPrice: "323 &#8381;",
   discount: "- 15%", 
   title: "Демиан",
-  author: "Герман Гессе" 
+  author: "Герман Гессе",
+  weight: "0.15 кг" 
 }, { 
   id: "BK-Y7LVSK",
   image: "images/monte.webp",
@@ -395,7 +442,8 @@ const books3 = [
   newPrice: "314 &#8381;",
   discount: "- 24%", 
   title: "Граф Монте-Кристо. Том 1",
-  author: "Александр Дюма (отец)" 
+  author: "Александр Дюма (отец)",
+  weight: "0.44 кг" 
 }, { 
   id: "BK-Y8LVSK",
   image: "images/monte-2.webp",
@@ -403,7 +451,8 @@ const books3 = [
   newPrice: "314 &#8381;",
   discount: "- 24%", 
   title: "Граф Монте-Кристо. Том 2",
-  author: "Александр Дюма (отец)" 
+  author: "Александр Дюма (отец)",
+  weight: "0.44 кг" 
 },
 ];
 
