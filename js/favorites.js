@@ -1,31 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
   const favsItemsContainer = document.querySelector('.js-favs-items');
+  const addToFavsBtns = document.querySelectorAll('.js-add-to-favorite');
   const deleteAllFavsBtn = document.querySelector('.js-delete-all-favs');
 
-  let favs = JSON.parse(localStorage.getItem('favsCart')) || [];
+  let favs = JSON.parse(localStorage.getItem('favs')) || [];
+  updateFavoriteButtons();
 
   function saveFavs() {
-    localStorage.setItem('favsCart', JSON.stringify(favs));
+    localStorage.setItem('favs', JSON.stringify(favs));
   }
 
   function removeFromFavs(productId) {
     const index = favs.findIndex(item => item.id === productId);
     if (index >= 0) {
       favs.splice(index, 1);
-      saveFavs();
-      updateFavsUI();
     }
   }
 
   function addToFavs(product) {
-    const index = favs.findIndex(item => item.id === product.id);
+    const index = favs.findIndex(item => item.id.toString() === product.id.toString());
+    console.log(index);
     if (index >= 0) {
       removeFromFavs(product.id);
     } else {
       favs.push(product);
-      saveFavs();
-      updateFavsUI();
     }
+    saveFavs();
   }
 
   function clearFavs() {
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
       favs = [];
       saveFavs();
       updateFavsUI();
+      updateFavoriteButtons();
     }
   }
 
@@ -49,9 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
           <div class="product-card__content">
             <div class="product-card__price">
-              <span class="product-price__old">${item.oldPrice}</span>
+              <span class="product-price__old">${item.oldPrice} ₽</span>
               <div class="product-price__new">
-                ${item.newPrice}
+                ${item.newPrice} ₽
                 <span class="product-price__discount">${item.discount}</span>
               </div>
             </div>
@@ -77,9 +78,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Делегирование для добавления/удаления избранного
-  document.body.addEventListener('click', function (e) {
+ document.body.addEventListener('click', function (e) {
+  
     const favBtn = e.target.closest('.js-add-to-favorite');
     if (!favBtn) return;
+
+  const icon = favBtn.querySelector('.material-icons');
+  if (!icon) return;
 
     const productCard = favBtn.closest('.product-card');
     const priceText = productCard.querySelector('.product-price__new')?.textContent || '0';
@@ -94,33 +99,32 @@ document.addEventListener('DOMContentLoaded', function () {
       title: productCard.querySelector('.product-info__title').textContent,
       author: productCard.querySelector('.product-info__author').textContent
     };
-
     addToFavs(favsProduct);
-
-    const icon = favBtn.querySelector('.favorite-icons');
-  if (icon) {
-    icon.classList.toggle('favorite-icons_active');
-  }
+    
+   updateFavoriteButtons();
   });
+
 
   deleteAllFavsBtn.addEventListener('click', clearFavs);
 
-  updateFavsUI();
-  updateFavIconsOnPage();
+ 
 
-  function updateFavIconsOnPage() {
-  document.querySelectorAll('.js-add-to-favorite').forEach(button => {
+  function updateFavoriteButtons() {
+  const favButtons = document.querySelectorAll('.js-add-to-favorite');
+  favButtons.forEach(button => {
     const productId = button.dataset.productId;
-    const icon = button.querySelector('.favorite-icons');
-    if (!icon) return;
-
-    if (favs.some(item => item.id === productId)) {
-      icon.classList.add('favorite-icons_active');
-    } else {
-      icon.classList.remove('favorite-icons_active');
-    }
+    const icon = button.querySelector('.material-icons');
+   if (!productId || !icon) return;
+    
+    const isFavorite = favs.some(item => String(item.id) === String(productId));
+    icon.classList.toggle('favorite-icons_active', isFavorite);
   });
 }
+
+// Вызовем функцию после инициализации
+
+ updateFavsUI();
+  updateFavoriteButtons();
 
 });
  

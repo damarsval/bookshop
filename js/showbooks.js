@@ -50,6 +50,7 @@ function initSwiper(swiper, books) {
  
   const swiperWrapper = document.querySelector(`.${swiper} .swiper-wrapper`);
   const slide = swiperWrapper.querySelectorAll('.swiper-slide');
+  
   slide.forEach((slide, index) => {
     const grid = slide.querySelector('.product-grid');
     if (slides[index]) {
@@ -59,19 +60,24 @@ function initSwiper(swiper, books) {
       });
       grid.innerHTML = booksHTML;
     }
-  }
-)
-}
-initSwiper('swiper1', books);
-initSwiper('swiper2', books2);
-initSwiper('swiper3', books3);    
-    // Функция для обновления количества товаров в навигации
-/*function updateCartQuantity() {
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const cartQuantity = cart.reduce((total, item) => total + item.quantity, 0);
-  document.querySelector('.js-cart-quantity').textContent = cartQuantity;
-}*/
+  });
 
-
+  // 🔧 После генерации карточек, обновим кнопки
+/*   if (typeof updateCartButtons === 'function') {
+    updateCartButtons();
+  } */
 
   
+}
+
+
+ 
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+  initSwiper('swiper1', books);
+  initSwiper('swiper2', books2);
+  initSwiper('swiper3', books3);
+  
+});

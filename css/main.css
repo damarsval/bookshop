@@ -469,7 +469,7 @@ a {
     font-size: 1.2rem;
     text-transform: uppercase;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     margin-right: 2px;
 }
 
@@ -480,7 +480,7 @@ a {
 .js-add-to-cart.added-to-cart {
     background-color: #000;
     color: white;
-    cursor: not-allowed;
+    /*cursor: not-allowed;*/
   }
 
 
