@@ -26,10 +26,11 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 1.8rem;
 }
 
 .delete-all .material-icons {
+  font-size: 3rem;
   margin-right: 4px;
 }
 
@@ -90,18 +91,18 @@
 }
 
 .cart-item__title {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 .cart-item__author {
   color: rgb(145, 145, 145);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   padding-top: 6px;
 }
 
 .cart-item__weight {
   color: rgb(145, 145, 145);
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   padding-top: 6px;
 }
 
@@ -186,8 +187,9 @@ input[type="number"]:focus {
   background-color: #f1f4f5;
   padding: 20px;
   min-width: 320px;
-  max-height: 150px;
+  max-height: 210px;
   padding-top: 25px;
+  
   position: sticky;
   top: 200px;
 }
@@ -202,7 +204,7 @@ input[type="number"]:focus {
 .info-item {
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 2rem;
   width: 100%;
 }
 
@@ -219,7 +221,25 @@ input[type="number"]:focus {
 }
 
 .info-item__value.info-item__amount {
-  font-size: 14px;
+  font-size: 1.6rem;
+}
+
+.cart-sidebar__btn-container{
+  display: flex;
+  align-self:center;
+  margin-top: 10px;
+}
+
+.checkout__btn {
+  border: none;
+  padding: 15px 80px;
+  border-radius: 6px;
+  background-color: black;
+  color: #fff;
+  font-family: EB Garamond;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .cart-container {

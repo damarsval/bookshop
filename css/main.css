@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: EB Garamond;
+    font-family: 'EB Garamond';
     /*background-color: #000;*/
 }
 
@@ -229,6 +229,24 @@ a {
 .nav-link {
     text-decoration: none;
     color: #141414;
+    position: relative;
+}
+
+.item-counter {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ff042e;
+    color: white;
+    font-size: 1.8rem;
+    position: absolute;
+    bottom: 31px;
+    right: -10px;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
 }
 
 .material-icons {
@@ -279,27 +297,7 @@ a {
     opacity: 1;
 }
 
-.favs_quantity,
-.cart_quantity {
-    display: none;
-    background-color: rgb(252, 9, 9);
-    border-radius: 10px;
-    padding: 0px 5px;
-    position: absolute;
-    font-size: 14px;
-}
 
-.cart_quantity {
-    top: -8px;
-    right: 4px;
-    color:#fff;
-}
-
-.favs_quantity {
-    top: -7px;
-    right: 17px;
-    color:#fff;
-}
 /* Нижняя часть хедера */
 .header-bottom__list {
     display: flex;
@@ -331,7 +329,7 @@ a {
 /* product start */
 .product-category {
     margin-bottom: 80px;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .products {
@@ -394,7 +392,7 @@ a {
 
 .product-price__old {
     display: block;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 18px;
     text-decoration: line-through;
 }
@@ -403,7 +401,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 12px;
 }
 
@@ -417,7 +415,7 @@ a {
 
 .product-info__title {
     margin-bottom: 4px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     max-height: 48px; 
@@ -429,7 +427,7 @@ a {
 .product-info__author {
     margin-bottom: 20px;
     color: rgb(146, 145, 145);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     max-height: 20px; /* Ограничение для автора */
     overflow: hidden;
     text-overflow: ellipsis;
@@ -466,7 +464,8 @@ a {
     padding: 12px 20px;
     background-color: var(--btn-color);
     color: #141414;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-family: 'EB Garamond';
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -593,3 +592,4 @@ a {
   }
   
 /* footer */
+

@@ -54,7 +54,7 @@
   }
 
   .cart-item__btns {
-    margin-top: 6px;
+    margin-top: 60px;
     right: 0;
   }
 
@@ -73,6 +73,10 @@
   .item-icon {
     font-size: 2rem;
   } 
+
+.checkout__btn {
+  font-size: 1.6em;
+}
 
 .footer-middle {
   padding-top: 60px;
@@ -97,6 +101,10 @@
 
 .cart_delete {
   font-size: 2rem;
+}
+
+.checkout__btn {
+  font-size: 1.4em;
 }
 
 .why-us {

@@ -19,20 +19,21 @@
   <link rel="stylesheet" href="css/favsResponsive.css">
 </head>
 <body>
-   <header class="header">
+  <header class="header">
     <div class="header-container">
       <div class="logo-cnt">
         <img class="logo-img" src="images/logo/spiral.png" alt="logo"/>
         <a href="index.html" class="logo">Спираль</a>
       </div>
-      <div class="header-middle">
-        <form class="search-bar_container">
-          <input class="search-bar" type="text" placeholder="Поиск">
-          <label for="" class="search-box">
-            <i class="material-icons search-icon">search</i>
-          </label>
-        </form>
-      </div>
+     <div class="header-middle">
+  <form class="search-bar_container">
+    <input class="search-bar" id="searchInput" type="text" placeholder="Поиск">
+    <label for="" class="search-box">
+      <i class="material-icons search-icon">search</i>
+    </label>
+    
+  </form>
+</div>
       <nav class="nav">
         <ul class="nav_list list-reset">
           <li class="nav-item">
@@ -40,7 +41,7 @@
               <i class="material-icons cart-icon">shopping_cart
                 <span class="tooltip">Корзина</span>
               </i>
-              <div class="cart_quantity js-cart-quantity">0</div>
+              <div class="item-counter js-cart-item-counter"></div>
             </a>
           </li>
           <li class="nav-item">
@@ -48,7 +49,7 @@
               <i class="material-icons fav-icon">favorite
                 <span class="tooltip">Избранное</span>
               </i>
-              <div class="favs_quantity js-favs-quantity">0</div>
+              <div class="item-counter js-favs-item-counter"></div>
             </a>
           </li>
         </ul>
@@ -84,13 +85,13 @@
       <div class="footer-top">
         <div class="footer-contacts-item">
           <span class="footer-contacts-text">Телефон</span>
-          <a href="tel:+89586222182" class="footer-contacts-link"
-            >+7 *** *** ** **</a
+          <a href="tel:+89393361230" class="footer-contacts-link"
+            >+7 (939) 336-12-30</a
           >
         </div>
         <div class="footer-contacts-item">
           <span class="footer-contacts-text">Адрес</span>
-          <a href="tel:+89586222182" class="footer-contacts-link"
+          <a href="#" class="footer-contacts-link"
             >г. Таганрог, ул. Чехова, 69</a
           >
         </div>
@@ -130,8 +131,8 @@
         </div>
         <div class="footer-column">
           <h3 class="footer-title">Связь с нами</h3>
-          <a href="mailto:camarik032@gmail.com" class="footer-mail"
-            >camarik032@gmail.com</a
+          <a href="mailto:spiral@gmail.com" class="footer-mail"
+            >spiral@gmail.com</a
           >
         </div>
       </div>
@@ -140,9 +141,8 @@
   </footer>
 
 
- 
+ <script src="js/favorites.js"></script>
   <script src="js/cart.js"></script>
-   <script src="js/favorites.js"></script>
   <script>
   
     

@@ -1,5 +1,21 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const favsItemsContainer = document.querySelector('.js-favs-items');
+function addToFavs(product) {
+  const index = favs.findIndex(item => item.id.toString() === product.id.toString());
+  if (index >= 0) {
+    removeFromFavs(product.id);
+  } else {
+    favs.push(product);
+  }
+  saveFavs();
+  updateFavoriteButtons();
+  
+  
+}
+function updateFavsCounter(favsQuantity) {
+    if (!cartItemCounter) return; // если счётчика нет — ничего не делаем
+    favsItemCounter.textContent = favsQuantity;
+    favsItemCounter.style.display = favsQuantity > 0 ? 'block' : 'none';
+  }
+const favsItemsContainer = document.querySelector('.js-favs-items');
   const addToFavsBtns = document.querySelectorAll('.js-add-to-favorite');
   const deleteAllFavsBtn = document.querySelector('.js-delete-all-favs');
 
@@ -17,7 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function addToFavs(product) {
+
+     deleteAllFavsBtn.addEventListener('click', clearFavs);
+  
+ /*  function addToFavs(product) {
     const index = favs.findIndex(item => item.id.toString() === product.id.toString());
     console.log(index);
     if (index >= 0) {
@@ -26,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
       favs.push(product);
     }
     saveFavs();
-  }
+  } */
 
   function clearFavs() {
     if (confirm('Вы точно хотите очистить "Избранное"?')) {
@@ -38,13 +57,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateFavsUI() {
+    if (!favsItemsContainer) return;
+
     favsItemsContainer.innerHTML = '';
     favs.forEach(item => {
       const isActive = favs.some(fav => fav.id === item.id);
     const favIconClass = isActive ? 'favorite-icons favorite-icons_active' : 'favorite-icons';
 
       const html = `
-        <article class="product-card" data-id="${item.id}">
+        <article class="product-card" data-id="${item.id}" product-weight="${item.weight}">
           <div class="product-card__img-container">
             <img class="product-card__img" src="${item.image}" alt="Обложка книги">
           </div>
@@ -78,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Делегирование для добавления/удаления избранного
- document.body.addEventListener('click', function (e) {
+ /* document.body.addEventListener('click', function (e) {
   
     const favBtn = e.target.closest('.js-add-to-favorite');
     if (!favBtn) return;
@@ -102,15 +123,16 @@ document.addEventListener('DOMContentLoaded', function () {
     addToFavs(favsProduct);
     
    updateFavoriteButtons();
+   updateFavsUI();
   });
 
 
-  deleteAllFavsBtn.addEventListener('click', clearFavs);
+  deleteAllFavsBtn.addEventListener('click', clearFavs); */
 
  
-
+updateFavsUI();
   function updateFavoriteButtons() {
-  const favButtons = document.querySelectorAll('.js-add-to-favorite');
+  const favButtons = document.querySelectorAll('.js-add-to-favorite, .js-cart-add-to-favorite');
   favButtons.forEach(button => {
     const productId = button.dataset.productId;
     const icon = button.querySelector('.material-icons');
@@ -123,8 +145,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Вызовем функцию после инициализации
 
- updateFavsUI();
-  updateFavoriteButtons();
-
-});
  
+
+/* document.addEventListener('DOMContentLoaded', function () {
+  
+
+}); */
+ 
+window.addToFavs = addToFavs;
+window.updateFavsUI = updateFavsUI;
+window.clearFavs = clearFavs;
+window.updateFavoriteButtons = updateFavoriteButtons;
