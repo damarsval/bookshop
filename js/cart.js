@@ -261,7 +261,7 @@ document.body.addEventListener('click', function(event) {
 
     // Если товар уже в корзине — удаляем
     if (isProductInCart(productId)) {
-      window.location.href = '/cart.html'; // Замени на свой путь
+      window.location.href = 'cart.html'; // Замени на свой путь
       return;
     }
 
