@@ -7,6 +7,7 @@ function addToFavs(product) {
   }
   saveFavs();
   updateFavoriteButtons();
+  updateCounters();
   
 }
 
@@ -127,7 +128,6 @@ const favsItemsContainer = document.querySelector('.js-favs-items');
 
   function updateFavoriteButtons() {
   const favButtons = document.querySelectorAll('.js-add-to-favorite, .js-cart-add-to-favorite');
-  console.log(favButtons);
   favButtons.forEach(button => {
     const productId = button.dataset.productId;
     const icon = button.querySelector('.material-icons');

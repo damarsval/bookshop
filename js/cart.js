@@ -1,7 +1,17 @@
 
-
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 document.addEventListener('DOMContentLoaded', function() {
+
+   updateCounters();     // сразу обновляем счетчики при загрузке
+  setupCartButtons();   // один раз вешаем обработчики на кнопки плюс/минус
+  
+
+function getTotalQuantity(cart) {
+  return cart.reduce((sum, item) => sum + item.quantity, 0);
+}
+
+
   // Элементы DOM
   const cartContainer = document.querySelector('.cart-container');
   const cartItemsContainer = document.querySelector('.js-cart-items');
@@ -11,20 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const notification = document.getElementById('notification');
   const cartItemCounter = document.querySelector('.js-cart-item-counter');
 
-  // Инициализация корзины
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  let count = 0;
-  //updateCartButtons();
- // updateFavoriteButtons();
+
 
 updateFavsUI();
-  // Универсальная функция обновления счётчика товаров в корзине
-  function updateCartCounter(totalItems) {
-    if (!cartItemCounter) return; // если счётчика нет — ничего не делаем
-    cartItemCounter.textContent = totalItems;
-    cartItemCounter.style.display = totalItems > 0 ? 'block' : 'none';
-  }
-
+ 
   // Функция обновления интерфейса корзины
   function updateCartUI() {
     cartItemsContainer.innerHTML = '';
@@ -90,7 +90,11 @@ updateFavsUI();
       const quantityInput = cartItemElement.querySelector('.item-quantity__counter');
       const deleteBtn = cartItemElement.querySelector('.cart-item__delete');
 
-      plusBtn.addEventListener('click', () => updateQuantity(item.id, item.quantity + 1));
+      plusBtn.addEventListener('click', () => {
+  
+        updateQuantity(item.id, item.quantity + 1);
+        updateCounters();
+      });
       minusBtn.addEventListener('click', () => {
         if (item.quantity > 1) updateQuantity(item.id, item.quantity - 1);
       });
@@ -98,6 +102,7 @@ updateFavsUI();
         let val = parseInt(e.target.value);
         if (isNaN(val) || val < 1) val = 1;
         updateQuantity(item.id, val);
+        
       });
       deleteBtn.addEventListener('click', () => removeFromCart(item.id));
     });
@@ -106,8 +111,45 @@ updateFavsUI();
     cartTitle.textContent = `Корзина (${totalItems})`;
  updateCartButtons();
   updateFavoriteButtons();
-    updateCartCounter(totalItems); // Обновляем счётчик
+    //updateCartCounter(totalItems); // Обновляем счётчик
   }
+
+  function setupCartButtons() {
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('cart-item__plus')) {
+      const id = e.target.closest('.cart-item').dataset.id;
+      updateQuantity(id, 1); // Увеличим на 1
+    }
+
+    if (e.target.classList.contains('cart-item__min')) {
+      const id = e.target.closest('.cart-item').dataset.id;
+      const item = getItemFromCart(id);
+      if (item && item.quantity > 1) {
+        updateQuantity(id, -1); // Уменьшим на 1
+      }
+    }
+  });
+}
+
+
+function updateQuantity(id, delta) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  const index = cart.findIndex(i => i.id === id);
+  if (index !== -1) {
+    cart[index].quantity += delta;
+    if (cart[index].quantity < 1) cart[index].quantity = 1;
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCounters();
+    // renderCart(); // если есть перерисовка корзины
+  }
+}
+
+function getItemFromCart(id) {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  return cart.find(item => item.id === id);
+}
+
 
   // Функция обновления итоговой информации
   function updateCartSummary(totalItems, totalPrice, totalDiscount) {
@@ -149,7 +191,9 @@ updateFavsUI();
 
     saveCart();
     updateCartButtons();
+    
     updateCartUI();
+    updateCounters();
    
     
   }
@@ -162,7 +206,9 @@ updateFavsUI();
       item.quantity = newQuantity;
       saveCart();
       updateCartUI();
+      
     }
+    
   }
   
   // Функция удаления товара из корзины
@@ -187,7 +233,7 @@ updateFavsUI();
   // Функция сохранения корзины в localStorage
   function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
-    
+    updateCounters();
   }
   
 function updateCartButtons() {
@@ -244,6 +290,8 @@ function updateCartButtons() {
     ];
   }
   
+ 
+
   // Обработчики событий
 document.body.addEventListener('click', function(event) {
   if (event.target.closest('.js-add-to-cart')) {
@@ -281,6 +329,7 @@ document.body.addEventListener('click', function(event) {
     };
 
     addToCart(product);
+    
     showNotification('Товар добавлен в корзину');
 
   }
@@ -365,10 +414,12 @@ if (deleteAllButton) {
 
   // Инициализация интерфейса
   
-  
+   updateCounters();
 
   updateCartButtons();
   updateFavoriteButtons();
   updateCartUI();
   updateFavsUI();
 });
+
+

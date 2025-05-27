@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Инициализация Swiper для каждого слайдера
   const swiperContainers = document.querySelectorAll(".swiper-container");
-  swiperContainers.forEach((container, index) => {
-    const swiperId = container.getAttribute("data-id");
+  swiperContainers.forEach((container) => {
+    
 
     const nextBtn = container.querySelector(`.swiper-button-next`);
     const prevBtn = container.querySelector(`.swiper-button-prev`);
