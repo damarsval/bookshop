@@ -8,19 +8,14 @@ function addToFavs(product) {
   saveFavs();
   updateFavoriteButtons();
   
-  
 }
-function updateFavsCounter(favsQuantity) {
-    if (!cartItemCounter) return; // если счётчика нет — ничего не делаем
-    favsItemCounter.textContent = favsQuantity;
-    favsItemCounter.style.display = favsQuantity > 0 ? 'block' : 'none';
-  }
+
 const favsItemsContainer = document.querySelector('.js-favs-items');
   const addToFavsBtns = document.querySelectorAll('.js-add-to-favorite');
   const deleteAllFavsBtn = document.querySelector('.js-delete-all-favs');
 
   let favs = JSON.parse(localStorage.getItem('favs')) || [];
-  updateFavoriteButtons();
+  //updateFavoriteButtons();
 
   function saveFavs() {
     localStorage.setItem('favs', JSON.stringify(favs));
@@ -129,10 +124,10 @@ const favsItemsContainer = document.querySelector('.js-favs-items');
 
   deleteAllFavsBtn.addEventListener('click', clearFavs); */
 
- 
-updateFavsUI();
+
   function updateFavoriteButtons() {
   const favButtons = document.querySelectorAll('.js-add-to-favorite, .js-cart-add-to-favorite');
+  console.log(favButtons);
   favButtons.forEach(button => {
     const productId = button.dataset.productId;
     const icon = button.querySelector('.material-icons');
@@ -142,7 +137,7 @@ updateFavsUI();
     icon.classList.toggle('favorite-icons_active', isFavorite);
   });
 }
-
+updateFavoriteButtons();
 // Вызовем функцию после инициализации
 
  

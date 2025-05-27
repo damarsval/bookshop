@@ -14,9 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Инициализация корзины
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   let count = 0;
-  updateCartButtons();
-  updateFavoriteButtons();
+  //updateCartButtons();
+ // updateFavoriteButtons();
 
+updateFavsUI();
   // Универсальная функция обновления счётчика товаров в корзине
   function updateCartCounter(totalItems) {
     if (!cartItemCounter) return; // если счётчика нет — ничего не делаем
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
           <div class="cart-item__btns">
             <button class="cart-item__btns-btn js-cart-add-to-favorite" data-product-id ="${item.id}">
-              <span class="material-icons favorite-icons">favorite</span>
+              <i class="material-icons favorite-icons">favorite</i>
             </button>
             <button class="cart-item__btns-btn cart-item__delete">
               <span class="material-icons item-icon">delete</span>
@@ -103,7 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateCartSummary(totalItems, totalPrice, totalDiscount);
     cartTitle.textContent = `Корзина (${totalItems})`;
-
+ updateCartButtons();
+  updateFavoriteButtons();
     updateCartCounter(totalItems); // Обновляем счётчик
   }
 
@@ -308,7 +310,7 @@ document.body.addEventListener('click', function (e) {
     };
     addToFavs(favsProduct);
     
-   updateFavoriteButtons();
+   //updateFavoriteButtons();
    updateFavsUI();
    updateCartButtons();
   });
@@ -345,7 +347,9 @@ document.body.addEventListener('click', function (e) {
     
     addToFavs(item);
     console.log('Добавлено в избранное:', item);
-   updateFavoriteButtons();
+   
+   
+   //updateFavoriteButtons();
    updateFavsUI();
   });
   
@@ -362,8 +366,9 @@ if (deleteAllButton) {
   // Инициализация интерфейса
   
   
-  updateCartButtons();
-updateFavoriteButtons();
 
+  updateCartButtons();
+  updateFavoriteButtons();
   updateCartUI();
+  updateFavsUI();
 });
