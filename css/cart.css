@@ -26,11 +26,13 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  font-family: 'EB Garamond';
   font-size: 1.8rem;
 }
 
 .delete-all .material-icons {
   font-size: 3rem;
+  
   margin-right: 4px;
 }
 

@@ -1,6 +1,14 @@
 @media (max-width: 480px) {
 
+.delete-favs__icon {
+  font-size: 2.5rem;
+}
 
+.favs-items__content {
+ 
+     grid-template-columns: auto; 
+     row-gap: 30px;
+}
 
 .favs-page__title {
   font-size: 2rem;

@@ -15,6 +15,10 @@
   align-items: center;
 }
 
+.delete-all_title {
+  font-family: EB Garamond;
+  font-size: 1.8rem;
+}
 .delete-favs {
   border: none;
   background-color: transparent;

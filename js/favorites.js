@@ -49,6 +49,7 @@ const favsItemsContainer = document.querySelector('.js-favs-items');
       saveFavs();
       updateFavsUI();
       updateFavoriteButtons();
+      updateCounters();
     }
   }
 
