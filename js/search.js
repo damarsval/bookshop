@@ -1,13 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('searchInput');
   const searchResults = document.getElementById('searchResults');
+  if (!window.books) {
+  const booksFromStorage = localStorage.getItem('allBooks');
+  window.books = booksFromStorage ? JSON.parse(booksFromStorage) : [];
+}
+
+
   
   if (!searchInput || !searchResults) return;
 
   searchInput.addEventListener('input', function(e) {
     const query = e.target.value.trim().toLowerCase();
 
-    // Позиционируем результаты строго под input
     const rect = searchInput.getBoundingClientRect();
     searchResults.style.top = rect.bottom + window.scrollY + 'px';
     searchResults.style.left = rect.left + window.scrollX + 'px';
@@ -18,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    // Пример поиска — замените на свою реализацию
+    
     const results = window.books.filter(book => 
       book.title.toLowerCase().includes(query) || 
       book.author.toLowerCase().includes(query)
@@ -46,9 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <p>${book.author} • ${book.newPrice}</p>
         </div>
       `;
-      item.addEventListener('click', () => {
-        window.location.href = `product.html?id=${book.id}`;
-      });
+      
       searchResults.appendChild(item);
     });
 

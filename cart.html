@@ -60,6 +60,8 @@
       </nav>
     </div>
   </header>
+
+  <div id="searchResults" class="search-results"></div>
   
   <main>
     <div class="container cart-container">
@@ -132,8 +134,32 @@
             </div>
         </div>      
     </div>
+    <form class="order__form">
+    <div class="order__form-container">
+      <div class="order__input">
+        <div class="name__input-label">ФИО</div>
+        <div class="input__wrapper">
+          <input class="input__name" type="text" name="name" placeholder="Гослинг Райан Томасович">
+        </div>
+      </div>
+      <div class="order__input">
+        <div class="name__input-label">Электронная почта</div>
+        <div class="input__wrapper">
+          <input class="input__email" type="text" name="email" placeholder="drive@gmail.com">
+        </div>
+      </div>
+      <div class="order__input">
+        <div class="phone__input-label">Телефон</div>
+        <div class="input__wrapper">
+          <input class="input__phone" type="text" name="phone" placeholder="+7 999 999-99-99">
+        </div>
+      </div>
+      <div class="order__form-btn">
+      <button class="final__checkout-btn" type="button">Завершить заказ</button>
+      </div>
     </div>
-  
+  </form>
+    
   </main>
 
   <footer class="footer">
@@ -195,10 +221,12 @@
       <div class="footer-bottom"></div>
     </div>
   </footer>
+     
    <script src="js/counter.js"></script>
    <script src="js/favorites.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/checkout.js"></script>
+  <script src="js/search.js"></script>
   
   
 </body>

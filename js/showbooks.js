@@ -1,4 +1,6 @@
-  // Функция для создания HTML карточки книги
+
+ 
+ // Функция для создания HTML карточки книги
 function createBookCard(book) {
   return `
     <article class="product-card" data-id = "${book.id}" product-weight = "${book.weight}">
@@ -79,5 +81,8 @@ function initSwiper(swiper, books) {
   initSwiper('swiper1', books);
   initSwiper('swiper2', books2);
   initSwiper('swiper3', books3);
-  
+
+  /* window.books = [...books, ...books2, ...books3];
+
+  localStorage.setItem('allBooks', JSON.stringify(window.books)); */
 });

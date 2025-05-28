@@ -1,11 +1,24 @@
 emailjs.init("9VRkqdXecVxphPm-3");
+
 document.querySelector('.checkout__btn').addEventListener('click', () => {
+  const orderForm = document.querySelector('.order__form');
+
+  if (orderForm) orderForm.style.display = 'flex';
+
+}) 
+
+document.querySelector('.final__checkout-btn').addEventListener('click', () => {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
   if (cart.length === 0) {
     alert('Корзина пуста');
     return;
   }
+
+  const nameInput = document.querySelector('.input__name');
+  const emailInput = document.querySelector('.input__email');
+  const phoneInput = document.querySelector('.input__phone');
+
 
   const orderHTML = cart.map(item => `
     <tr style="border-bottom:1px solid #ccc;">
@@ -40,20 +53,23 @@ document.querySelector('.checkout__btn').addEventListener('click', () => {
     </table>
   `;
 
-  const userEmail = prompt('Введите ваш email:');
+  const userName = nameInput.value;
+  const userEmail = emailInput.value;
   if (!userEmail) {
     alert('Email обязателен для оформления заказа');
     return;
   }
 console.log(cart);
   emailjs.send('service_rxkfh9j', 'template_pa1jrrt', {
+    user_name: userName, 
     order_html: fullHTML,
     user_email: userEmail
   }).then(() => {
     alert('Заказ с обложками отправлен!');
-    // Можно добавить редирект или очистку корзины на странице
   }).catch(err => {
-    alert('Ошибка при отправке заказа, попробуйте позже.');
+    
     console.error(err);
   });
+
+ 
 });
